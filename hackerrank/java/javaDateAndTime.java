@@ -6,6 +6,7 @@ import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
+import java.time.LocalDate;
 
 package hackerrank.java;
 
@@ -23,6 +24,9 @@ class Result {
 
     public static String findDay(int month, int day, int year) {
 
+       
+        LocalDate dt = LocalDate.of(year, month, day);
+        return dt.getDayOfWeek().name();
     }
 
 }
