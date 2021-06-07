@@ -3,26 +3,32 @@
 
 using namespace std;
 
-class BreadthFirstSearch{
+class Graph{
     int numVertices;
     list<int>* adjLists;
     bool* visited;
 
     public:
-    BreadthFirstSearch(int vertices);
+    Graph(int vertices);
     void addEdge(int src, int dest);
     void BFS(int startVertex);
 };
 
 //Create Graph with different vertices,
 // and maintain an adjacency list
-BreadthFirstSearch::BreadthFirstSearch(int vertices){
+Graph::Graph(int vertices){
     numVertices = vertices;
     adjLists = new list<int>[vertices];
 }
 
 // Add Edges to the graph
-void BreadthFirstSearch::BFS(int startVertex){
+void Graph::addEdge(int src, int dest) {
+  adjLists[src].push_back(dest);
+  adjLists[dest].push_back(src);
+}
+
+// BFS algorithm
+void Graph::BFS(int startVertex){
     visited = new bool[numVertices];
     for(int i = 0; i < numVertices; i++){
         visited[i] = false;
@@ -48,4 +54,18 @@ void BreadthFirstSearch::BFS(int startVertex){
             }
         }
     }
+}
+
+int main() {
+  Graph g(4);
+  g.addEdge(0, 1);
+  g.addEdge(0, 2);
+  g.addEdge(1, 2);
+  g.addEdge(2, 0);
+  g.addEdge(2, 3);
+  g.addEdge(3, 3);
+
+  g.BFS(2);
+
+  return 0;
 }
