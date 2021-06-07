@@ -1,3 +1,4 @@
+package java.search;
 import java.util.*;
 
 public class BreadthFistSearch{
