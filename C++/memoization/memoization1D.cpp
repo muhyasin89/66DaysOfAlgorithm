@@ -1,25 +1,4 @@
-Reference:
-
-<ul>
-    <li><h3>Graph</h3></li>
-    <li>https://www.programiz.com/dsa/graph-bfs</li>
-    <li>https://www.programiz.com/dsa/graph-dfs</li>
-</ul>
-
-
-<ul>
-    <li><h3>Queue using Stacks</h3></li>
-    <li>https://www.geeksforgeeks.org/queue-using-stacks/</li>
-</ul>
-
-
-<ul>
-    <li><h3>Memoization</h3></li>
-    <li>https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/</li>
-</ul>
-
-for answering problem there is several things to consider
-use this format bellow
+"""
 ===========================
 what the problem?       |||
 ===========================
@@ -41,3 +20,29 @@ how many ways to solve this problem?|
 ===========================
 how long it takes?       ||
 ===========================
+"""
+
+//C++ program to find the Nth term
+// of Fibonacci series
+
+#include <iostream>
+using namespace std; 
+
+//Fibonacci series using recursion
+int fib(int n){
+    //Base Case
+    if (n <= 1){
+        return n;
+    }
+
+    //Recursive Call
+    return fib(n - 1) + fib(n-2);
+}
+
+//Driver Code
+int main(){
+    int n = 6;
+    printf("%d", fib(n));
+
+    return 0;
+}
