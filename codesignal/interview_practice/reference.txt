@@ -1,0 +1,47 @@
+5 Problem Solving Tips for Cracking Coding Interview Questions
+https://www.youtube.com/watch?v=GBuHSRDGZBY
+
+Top 10 Algoritma
+https://www.youtube.com/watch?v=r1MXwyiGi_U
+
+Big-O
+https://www.youtube.com/watch?v=D6xkbGLQesk
+
+https://www.tutorialspoint.com/python_data_structure/python_big_o_notation.htm
+
+how to pass google and uber interview
+https://www.youtube.com/watch?v=nmf-oObylnk
+
+https://www.youtube.com/watch?v=qTb1sZX74K0
+
+Devide and Conquer
+https://www.tutorialspoint.com/python_data_structure/python_divide_and_conquer.htm
+
+Python Recursion
+https://www.tutorialspoint.com/python_data_structure/python_recursion.htm
+
+Python backtracking
+https://www.tutorialspoint.com/python_data_structure/python_backtracking.htm
+
+Linear Search
+https://www.tutorialspoint.com/python_data_structure/python_searching_algorithms.htm
+
+Backtracking
+https://www.youtube.com/watch?v=DKCbsiDBN6c
+
+2.6.3 Heap - Heap Sort - Heapify - Priority Queues
+https://www.youtube.com/watch?v=HqPJF2L5h9U
+
+3.6 Dijkstra Algorithm - Single Source Shortest Path - Greedy Method
+https://www.youtube.com/watch?v=XB4MIexjvY0
+
+8. NP-Hard and NP-Complete Problems
+https://www.youtube.com/watch?v=e2cF8a5aAhE
+
+8.1 NP-Hard Graph Problem - Clique Decision Problem
+https://www.youtube.com/watch?v=qZs767KQcvE
+
+Fastest Sorting Algorithm. Ever!
+https://www.youtube.com/watch?v=4Q72kbwyEmk
+
+https://github.com/bephrem1/backtobackswe
