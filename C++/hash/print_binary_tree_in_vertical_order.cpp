@@ -36,10 +36,12 @@ how many ways to solve this problem?|
 how long it takes?       ||
 ===========================
 
-We have discussed a O(n2) solution in the previous post. In this post, an efficient solution based on the hash map is discussed.  
-
-Following is the C++ implementation of the above method. Thanks to Chirag for providing the below C++ implementation
 
 
+==========================
+Reference               ||
+==========================
+We have discussed a O(n2) solution in the previous post. 
+In this post, an efficient solution based on the hash map is discussed.  
 
 """"
