@@ -1,4 +1,4 @@
-package hackerRankGroup;
+package JAVA.basic;
 
 import java.io.*;
 import java.util.*;

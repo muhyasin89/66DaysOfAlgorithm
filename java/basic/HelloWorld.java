@@ -1,4 +1,4 @@
-package hackerRankGroup;
+package JAVA.basic;
 
 
 public class HelloWorld {

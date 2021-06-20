@@ -1,4 +1,4 @@
-package hackerRankGroup;
+package JAVA.basic;
 // import hackerRankGroup.EndOfFile;
 // import hackerRankGroup.HelloWorld;
 
