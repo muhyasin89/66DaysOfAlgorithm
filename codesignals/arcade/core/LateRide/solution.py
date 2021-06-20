@@ -13,3 +13,7 @@ def lateRide(n):
     
 
 print(lateRide(a))
+
+#more effective 
+def lateRide(n):
+    return sum(map(int, str(n // 60 * 100 + n % 60)))
