@@ -31,38 +31,32 @@ understand before Dynamic Programming   |||
 and explain why?                        |||
 ===========================================
 
-<ul>
-    <li>Characteristic of Dynamic Programming</li>
-    <ul>
-        <li>Overlapping subproblems</li>
-        <li>Optimal Substructure property</li>
-    </ul>
-    Dynamic Programming methods
-     <ul>
-        <li>Top-down with Memoization</li>
-        <li>Bottom up with Tabulation</li>
-    </ul>
-</ul>
+* Characteristic of Dynamic Programming
+    * Overlapping subproblems
+    * Optimal Substructure property
+* Dynamic Programming methods
+    * Top-down with Memoization
+    * Bottom up with Tabulation
 
 
 Recent Articles on Dynamic Programming
-Basic Concepts
-Advanced Concepts
+1. Basic Concepts
+2. Advanced Concepts
 Basic Problems
-Intermediate Problems
-Hard Problems
+1. Intermediate Problems
+2. Hard Problems
 Quick Links
 
 Basic Concepts :
 
 Tabulation vs Memoizatation
-Optimal Substructure Property
-Overlapping Subproblems Property
+1. Optimal Substructure Property
+2. Overlapping Subproblems Property
 How to solve a Dynamic Programming Problem ?
 
 Advanced Concepts :
-Bitmasking and Dynamic Programming | Set 1
-Bitmasking and Dynamic Programming | Set-2 (TSP)
+1. Bitmasking and Dynamic Programming | Set 1
+2. Bitmasking and Dynamic Programming | Set-2 (TSP)
 Digit DP | Introduction
 
 
@@ -72,9 +66,6 @@ https://www.geeksforgeeks.org/dynamic-programming/
 
 
 Quick Links :
-
-<a href="https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/">
-Top 20 Dynamic Programming Interview Questions</a>
-<a href="https://practice.geeksforgeeks.org/explore/?category%5B%5D=Dynamic%20Programming&page=1&category%5B%5D=Dynamic%20Programming">‘Practice Problems’ on Dynamic Programming</a>
-<a href="https://www.geeksforgeeks.org/algorithms-gq/dynamic-programming-gq/">
-‘Quiz’ on Dynamic Programming</a>
+Markup : [Named Link](https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/ "Top 20 Dynamic Programming Interview Questions")
+Markup : [Named Link](https://practice.geeksforgeeks.org/explore/?category%5B%5D=Dynamic%20Programming&page=1&category%5B%5D=Dynamic%20Programming "‘Practice Problems’ on Dynamic Programming")
+Markup : [Named Link](https://www.geeksforgeeks.org/algorithms-gq/dynamic-programming-gq/ "‘Quiz’ on Dynamic Programming")

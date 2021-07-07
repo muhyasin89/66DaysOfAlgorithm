@@ -10,6 +10,7 @@ Type of Tree:
 * Binary Search Tree
 * AVL Tree(Not included)
 * Red-Black Tree(Not Included)
+----------------------------------------------------------------------
     ===========================
     what is General Tree?    |||
     ===========================  
