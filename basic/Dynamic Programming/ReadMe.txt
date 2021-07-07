@@ -66,9 +66,6 @@ https://www.geeksforgeeks.org/dynamic-programming/
 
 
 Quick Links :
-
-<a href="https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/">
-Top 20 Dynamic Programming Interview Questions</a>
-<a href="https://practice.geeksforgeeks.org/explore/?category%5B%5D=Dynamic%20Programming&page=1&category%5B%5D=Dynamic%20Programming">‘Practice Problems’ on Dynamic Programming</a>
-<a href="https://www.geeksforgeeks.org/algorithms-gq/dynamic-programming-gq/">
-‘Quiz’ on Dynamic Programming</a>
+[Named Link](https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/ "Top 20 Dynamic Programming Interview Questions")
+[Named Link](https://practice.geeksforgeeks.org/explore/?category%5B%5D=Dynamic%20Programming&page=1&category%5B%5D=Dynamic%20Programming "‘Practice Problems’ on Dynamic Programming")
+[Named Link](https://www.geeksforgeeks.org/algorithms-gq/dynamic-programming-gq/ "‘Quiz’ on Dynamic Programming")
