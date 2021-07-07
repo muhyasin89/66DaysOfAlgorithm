@@ -91,7 +91,7 @@ To test your understanding, try ranking the following functions from the most co
 Question: Rank following functions from the most complex to the lease complex.</p>
 
 
-![alt text](https://www.freecodecamp.org/news/content/images/2021/06/1_69bzUpQxBwZFLBimaMe7kQ.png)
+![alt text](https://www.freecodecamp.org/news/content/images/2021/06/1_69bzUpQxBwZFLBimaMe7kQ.png?raw=true "Free Code Camp"))
 <p>Examples taken from <a href="https://www.chegg.com/homework-help/questions-and-answers/problem-ask-refresh-knowledge-asymptotic-notations-rank-following-functions-order-growth-f-q23698273">Textbook Problems</a></p>
 
 
