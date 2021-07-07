@@ -1,0 +1,80 @@
+================================
+what is Dynamic Programming? |||
+================================
+Dynamic Programming (DP) is an algorithmic technique for solving an 
+optimization problem by breaking it down into simpler subproblems and utilizing 
+the fact that the optimal solution to the overall problem depends upon 
+the optimal solution to its subproblems.
+
+    ===========================
+    | more simple Definition? |
+    ===========================
+    optimize way to solve problem
+
+=======================================
+why we do need a Dynamic Programming? |
+=======================================
+
+
+===============================================
+what Happen if we dont use it or understand it?|
+===============================================
+
+
+=========================================
+can you give me simple example of ----?|
+========================================
+
+===========================================
+what is related topic that you need to  |||
+understand before Dynamic Programming   |||
+and explain why?                        |||
+===========================================
+
+<ul>
+    <li>Characteristic of Dynamic Programming</li>
+    <ul>
+        <li>Overlapping subproblems</li>
+        <li>Optimal Substructure property</li>
+    </ul>
+    Dynamic Programming methods
+     <ul>
+        <li>Top-down with Memoization</li>
+        <li>Bottom up with Tabulation</li>
+    </ul>
+</ul>
+
+
+Recent Articles on Dynamic Programming
+Basic Concepts
+Advanced Concepts
+Basic Problems
+Intermediate Problems
+Hard Problems
+Quick Links
+
+Basic Concepts :
+
+Tabulation vs Memoizatation
+Optimal Substructure Property
+Overlapping Subproblems Property
+How to solve a Dynamic Programming Problem ?
+
+Advanced Concepts :
+Bitmasking and Dynamic Programming | Set 1
+Bitmasking and Dynamic Programming | Set-2 (TSP)
+Digit DP | Introduction
+
+
+Reference:
+https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/m2G1pAq0OO0
+https://www.geeksforgeeks.org/dynamic-programming/
+
+
+Quick Links :
+
+<a href="https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/">
+Top 20 Dynamic Programming Interview Questions</a>
+<a href="https://practice.geeksforgeeks.org/explore/?category%5B%5D=Dynamic%20Programming&page=1&category%5B%5D=Dynamic%20Programming">‘Practice Problems’ on Dynamic Programming</a>
+<a href="https://www.geeksforgeeks.org/algorithms-gq/dynamic-programming-gq/">
+‘Quiz’ on Dynamic Programming</a>
