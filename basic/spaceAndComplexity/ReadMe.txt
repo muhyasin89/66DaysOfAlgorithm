@@ -4,12 +4,12 @@ understand before big O,                |||
 and explain why?                        |||
 ===========================================
 
-<h3>The dominant term</h3>
+The dominant term===========================================
 The dominant term is the term the one that gets biggest (i.e. dominates) as N gets bigger. 
 and as N gets very large, the N^4 is going to get biggest (irrespective of the 200 that you multiply it by)
 
 
-<h3>coefficients</h3>
+coefficients===========================================
 MATHEMATICS
 A coefficient is a number multiplied by a variable.
 a numerical or constant quantity placed before and multiplying the variable in an algebraic expression (e.g. 4 in 4x y).
@@ -27,7 +27,7 @@ Space Complexity
 The space complexity is related to how much memory the program will use, and therefore is also an important factor to analyze.
 
 
-<h3>Big O, Little O, Omega & Theta</h3>
+Big O, Little O, Omega & Theta===========================================
 <ul>
     <li>Big O: “f(n) is O(g(n))” iff for some constants c and N₀, f(N) ≤ cg(N) for all N > N₀</li>
     <li>Omega: “f(n) is Ω(g(n))” iff for some constants c and N₀, f(N) ≥ cg(N) for all N > N₀</li>
@@ -91,8 +91,9 @@ To test your understanding, try ranking the following functions from the most co
 Question: Rank following functions from the most complex to the lease complex.</p>
 
 
-<img src="https://www.freecodecamp.org/news/content/images/2021/06/1_69bzUpQxBwZFLBimaMe7kQ.png" />
+![alt text](https://www.freecodecamp.org/news/content/images/2021/06/1_69bzUpQxBwZFLBimaMe7kQ.png)
 <p>Examples taken from <a href="https://www.chegg.com/homework-help/questions-and-answers/problem-ask-refresh-knowledge-asymptotic-notations-rank-following-functions-order-growth-f-q23698273">Textbook Problems</a></p>
+
 
 
 General Rules:
