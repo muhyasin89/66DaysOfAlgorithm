@@ -1,51 +1,75 @@
-======================================<br>
-why do you need to learn ------?|||<br>
-======================================<br>
+======================================
+why do you need to learn ------?|||
+======================================
 
-======================================<br>
-how long you gonna learn it? |||<br>
-======================================<br>
+======================================
+how long you gonna learn it? |||
+======================================
 
-============================================<br>
-how many hours a day do you spent for it |||<br>
-============================================<br>
+============================================
+how many hours a day do you spent for it |||
+============================================
 
 Reference:
 
-<ul>
-    <li><h3>Graph</h3></li>
-    <li>https://www.programiz.com/dsa/graph-bfs</li>
-    <li>https://www.programiz.com/dsa/graph-dfs</li>
-</ul>
+- Graph
 
-<ul>
-    <li><h3>Queue using Stacks</h3></li>
-    <li>https://www.geeksforgeeks.org/queue-using-stacks/</li>
-</ul>
+  - https://www.programiz.com/dsa/graph-bfs
+  - https://www.programiz.com/dsa/graph-dfs
 
-<ul>
-    <li><h3>Memoization</h3></li>
-    <li>https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/</li>
-</ul>
+- Queue using Stacks
+
+  - https://www.geeksforgeeks.org/queue-using-stacks/
+
+- Memoization
+  - https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+
+Note:
+
+- Brute Force approach finds all the possible solutions and selects desired solution per given the constraints.
+- Dynamic Programming also uses Brute Force approach to find the OPTIMUM solution, either maximum or minimum.
+- Backtracking also uses Brute Force approach but to find ALL the solutions.
+- Solutions to the Backtracking problems can be represented as State-Space Tree.
+- The constrained applied to find the solution is called Bounding function.
+- Backtracking follows Depth-First Search method.
+- Branch and Bound is also a Brute Force approach, which uses Breadth-First Search method.
 
 for answering problem there is several things to consider
-use this format bellow<br>
-===========================<br>
-what the problem? |||<br>
-===========================<br>
+use this format bellow
 
-===========================<br>
-what the expected result? |<br>
-===========================<br>
+===========================
+what the problem? |||
+===========================
 
-========================================<br>
-how many step for solving this problem?|<br>
-========================================<br>
+===========================
+Can you Elaborate? |||
+===========================
 
-===================================== <br>
-how many ways to solve this problem?|<br>
-=====================================<br>
+===========================
+This Question Consist of? |||
+===========================
 
-===========================<br>
-how long it takes? ||<br>
-===========================<br>
+===========================
+|Another Example? |||
+===========================
+
+    ===================
+    Information so far|
+    ===================
+
+    ==============
+    unclear use?|
+    ==============
+
+
+    ========================================
+    step by step for solving this problem?|
+    ========================================
+
+    =====================================
+    how many ways to solve this problem?|
+    =====================================
+
+    ===========================
+    how long it takes? ||
+    ===========================
