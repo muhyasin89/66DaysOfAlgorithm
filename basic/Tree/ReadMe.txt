@@ -3,14 +3,14 @@ what is Tree?      |||
 ===========================
 A tree is a Hierarchical data structure that naturally hierarchically stores the information. The Tree data structure is one of the most efficient and mature. The nodes connected by the edges are represented.
 
-
-Type of Tree:
-* General Tree
-* Binary Tree
-* Binary Search Tree
-* AVL Tree(Not included)
-* Red-Black Tree(Not Included)
-----------------------------------------------------------------------
+    ===========================
+    Type of Tree:       |||
+    ===========================
+    * General Tree
+    * Binary Tree
+    * Binary Search Tree
+    * AVL Tree(Not included)
+    * Red-Black Tree(Not Included)
     ===========================
     what is General Tree?    |||
     ===========================  

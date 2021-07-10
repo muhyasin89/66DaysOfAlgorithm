@@ -10,6 +10,7 @@ The pair of the form (u, v) indicates that there is an edge from vertex u to ver
 commonly used representations of a graph.
 1. Adjacency Matrix 
 2. Adjacency List 
+
 ------------------------------------------------
     ==============================
     what is Adjacency Matrix?  |||
@@ -34,6 +35,8 @@ commonly used representations of a graph.
     ============================
     Consumes more space O(V^2). Even if the graph is sparse(contains less number of edges), it consumes the same space. Adding a vertex is O(V^2) time. 
 
+    practice:
+    <https://leetcode.com/problems/find-the-town-judge/discuss/614768/straight-solution-adjacency-matrix >
 ------------------------------------------------
     ==============================
     what is Adjacency List?  |||
@@ -78,8 +81,8 @@ and explain why?                        |||
 ===========================
 example expected output |||
 ===========================
-Adjacency list of vertex 0
-head -> 1-> 4
+ Adjacency list of vertex 0
+ head -> 1-> 4
 
  Adjacency list of vertex 1
  head -> 0-> 2-> 3-> 4
@@ -92,3 +95,13 @@ head -> 1-> 4
 
  Adjacency list of vertex 4
  head -> 0-> 1-> 3
+
+ example:
+ <https://leetcode.com/problems/course-schedule-ii/discuss/427037/adjacency-list-bfs>
+
+ <https://leetcode.com/problems/find-the-town-judge/discuss/746120/adjacency-list-graph-solution-in-java>
+===========================
+Graph Representation |||
+===========================
+
+https://leetcode.com/problems/clone-graph/discuss/42317/graph-representation

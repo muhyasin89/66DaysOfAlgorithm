@@ -22,7 +22,23 @@ Reference:
   - https://www.geeksforgeeks.org/queue-using-stacks/
 
 - Memoization
+
   - https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+
+- Greedy Method
+
+  - Greedy Method Introduction <https://www.youtube.com/watch?v=ARvQcqJ_-NY>
+
+- Dynamic Programming
+
+  - Principle of Optimality - Dynamic Programming introduction <https://www.youtube.com/watch?v=5dRGRueKU3M>
+
+- Branch and Bound
+  - Branch and Bound Introduction <https://www.youtube.com/watch?v=3RBNPc0_Q6g>
+  - BFS
+    - Queue => FIFO
+    - Stack => LIFO
+    - LeastCost
 
 Note:
 
@@ -73,3 +89,34 @@ This Question Consist of? |||
     ===========================
     how long it takes? ||
     ===========================
+
+optimalization problem:
+
+1. Greedy Method
+2. Dynamic Programming
+3. Branch and Bound
+
+Greedy Method - has pre condition
+example :
+
+- shortest method
+- least cost
+
+Dynamic programming - find all possible solution and find the best
+
+Dyanamic programming using principle of optimality
+principle of optimality is the problem can be solve by taking seek and solve decision
+
+    ===========================
+    Can you colaborate? ||
+    ===========================
+
+what is optimazation problem?
+
+Problem that required minimum result or maximum result
+
+Fesiable solution:
+solution that statisfy the condition of problem
+
+Optimal solution:
+achieve the objective as problem
