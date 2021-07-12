@@ -1,26 +1,28 @@
+# Singly-linked lists are already defined with this interface:
+# class ListNode(object):
+#   def __init__(self, x):
+#     self.value = x
+#     self.next = None
+#
 def removeKFromList(l, k):
-    # check if value none return it
-    # if value is same as k(deleted value)
-    # make head skip one
-    if l == None:  # None
+    # head if not none return head
+    if not l:
         return l
-    elif l.value == k:
+
+    # if head not None and value same as k
+    # go to next node
+    while l and l.value == k:
         l = l.next
 
-    temp = l  # set temp for head
-    # loop temp is not none and temp.next not None
-    # if next node is k
-    # skip next to another node
-    # else just go to another node
-    while temp and temp.next:
-        if temp.next.value == k:
-            temp.next = temp.next.next
+    n = l
+
+    # when head and head have next node
+    # if next node value is same as k
+    # skip one node else go to next node
+    while n and n.next:
+        if n.next.value == k:
+            n.next = n.next.next
         else:
-            temp = temp.next
+            n = n.next
 
-    # if temp not none and temp.value is k
-    # move head forward
-    if temp and temp.value == k:
-        l = l.next
-
-    return temp
+    return l

@@ -1,22 +1,26 @@
 ===========================
 what the problem? |||
 ===========================
-remove node from linkedlist
+find if list is palindrome
+
 ===========================
 what the Goal? |||
 ===========================
-remove the node
+find if list is palindrome
+
 ===========================
 |Example? |||
 ===========================
-For l = [3, 1, 2, 3, 4, 5] and k = 3, the output should be
-removeKFromList(l, k) = [1, 2, 4, 5];
-For l = [1, 2, 3, 4, 5, 6, 7] and k = 10, the output should be
-removeKFromList(l, k) = [1, 2, 3, 4, 5, 6, 7].
+For l = [0, 1, 0], the output should be
+isListPalindrome(l) = true;
 
-===================
-Information so far|
-===================
+For l = [1, 2, 2, 3], the output should be
+isListPalindrome(l) = false
+
+    ===================
+    Information so far|
+    ===================
+    we got an value
 
     ==============
     unclear use?|
@@ -26,6 +30,10 @@ Information so far|
     ========================================
     step by step for solving this problem?|
     ========================================
+    find length of LinkedList
+
+    if %2 is zero return false
+    if not check if two side has same value but in opposite order
 
     =====================================
     how many ways to solve this problem?|

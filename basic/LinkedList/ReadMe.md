@@ -49,3 +49,37 @@ To delete a node of a linked list recursively we need to do the following steps.
 4.Store this node to deallocate it later using free() function.
 
 5.Change this node pointer so that it points to it’s next and by performing this previous node’s next also get properly linked.
+
+===================================
+Array vs Linked List?|
+===================================
+Arrays store elements in contiguous memory locations, resulting in easily calculable addresses for the elements stored and this allows a faster access to an element at a specific index
+
+Linked lists are less rigid in their storage structure and elements are usually not stored in contiguous locations, hence they need to be stored with additional tags giving a reference to the next element.
+
+    ===================================
+    Major differences are listed below:
+    ===================================
+    size: dynamic size which can change at runtime.
+    Memory allocation: dynamically allocated array also allocates memory at runtime.
+    Memory efficiency: linked lists can increase their sizes step-by-step proportionately to the amount of data.
+    Execution time: modifying a certain element are faster in array, inserting/deleting an element in the data are faster in linked list
+
+===================================
+favour of Linked Lists:
+===================================
+
+- The size of the arrays is fixed
+- Inserting a new element in an array of elements is expensive
+- Deletion is also expensive with arrays until unless some special techniques are used.
+
+Advantage LinkedList over Array:
+
+- Dynamic size
+- Ease of insertion/deletion
+
+Disadvantage of LinkedList:
+
+- Random access is not allowed
+- Extra memory space for a pointer
+- Arrays have better cache locality that can make a pretty big difference in performance.
