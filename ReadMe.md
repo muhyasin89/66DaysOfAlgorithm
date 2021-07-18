@@ -58,9 +58,9 @@ Dynamic programming - find all possible solution and find the best
 Dyanamic programming using principle of optimality
 principle of optimality is the problem can be solve by taking seek and solve decision
 
-===========================
-Can you colaborate? ||
-===========================
+---------------------
+Can you colaborate? |
+---------------------
 
 what is optimazation problem?
 
