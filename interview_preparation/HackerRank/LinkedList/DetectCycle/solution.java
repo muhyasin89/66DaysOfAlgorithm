@@ -1,4 +1,4 @@
-package interview_preparation.HackerRank.DetectCycle;
+package interview_preparation.HackerRank.LinkedList.DetectCycle;
 
 //A Node is defined as: 
 class Node {

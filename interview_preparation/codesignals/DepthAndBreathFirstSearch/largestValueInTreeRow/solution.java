@@ -1,32 +1,32 @@
-package interview_preparation.codesignals.DepthAndBreathFirstSearch.largestValueInTreeRow;
-//
-// Binary trees are already defined with this interface:
-// class Tree<T> {
-//   Tree(T x) {
-//     value = x;
-//   }
-//   T value;
-//   Tree<T> left;
-//   Tree<T> right;
-// }
+
 int[] largestValuesInTreeRows(Tree<Integer> t) {
-    if(t==null) return new int[0];
-       List<Integer> list = new ArrayList<>();
-       Queue<Tree<Integer>> q = new LinkedList<>();
-       q.offer(t);
-       while(!q.isEmpty()){
-           int max=Integer.MIN_VALUE;
-           int size= q.size();
-           for(int i = 0; i< size; i++){
-               Tree<Integer> tempNode= q.poll();
-               max = Math.max(max, tempNode.value);
-               if(tempNode.left!= null) q.offer(tempNode.left);
-               if(tempNode.right!=null) q.offer(tempNode.right);
-           }
-           list.add(max);
-       }
-       int[] re= new int[list.size()];
-       for(int i= 0; i<list.size(); i++)
-           re[i]= list.get(i);
-       return re;
+    if (t == null) {
+        return new int[0];
+    }
+    Queue<Tree<Integer>> queue = new LinkedList<>();
+    queue.offer(t);
+    List<Integer> levelMax = new ArrayList<>();
+    
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        int tmpMax = Integer.MIN_VALUE;
+        for (int i = 0; i < size; i++) {
+            Tree<Integer> cur = queue.poll();
+            if (cur.value > tmpMax) {
+                tmpMax = cur.value;
+            }
+            if (cur.left != null) {
+                queue.offer(cur.left);
+            }
+            if (cur.right != null) {
+                queue.offer(cur.right);
+            }
+        }
+        levelMax.add(tmpMax);
+    }
+    int[] result = new int[levelMax.size()];
+    for (int i = 0; i < levelMax.size(); i++) {
+        result[i] = levelMax.get(i);
+    }
+    return result;
 }

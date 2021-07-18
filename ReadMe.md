@@ -1,15 +1,3 @@
-======================================
-why do you need to learn ------?|||
-======================================
-
-======================================
-how long you gonna learn it? |||
-======================================
-
-============================================
-how many hours a day do you spent for it |||
-============================================
-
 Reference:
 
 - Graph
@@ -53,43 +41,6 @@ Note:
 for answering problem there is several things to consider
 use this format bellow
 
-===========================
-what the problem? |||
-===========================
-
-===========================
-Can you Elaborate? |||
-===========================
-
-===========================
-This Question Consist of? |||
-===========================
-
-===========================
-|Another Example? |||
-===========================
-
-    ===================
-    Information so far|
-    ===================
-
-    ==============
-    unclear use?|
-    ==============
-
-
-    ========================================
-    step by step for solving this problem?|
-    ========================================
-
-    =====================================
-    how many ways to solve this problem?|
-    =====================================
-
-    ===========================
-    how long it takes? ||
-    ===========================
-
 optimalization problem:
 
 1. Greedy Method
@@ -107,9 +58,9 @@ Dynamic programming - find all possible solution and find the best
 Dyanamic programming using principle of optimality
 principle of optimality is the problem can be solve by taking seek and solve decision
 
-    ===========================
-    Can you colaborate? ||
-    ===========================
+===========================
+Can you colaborate? ||
+===========================
 
 what is optimazation problem?
 
