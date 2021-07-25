@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class LinkedList {
     Node head;
+    LinkedList globalList;
 
     static class Node {
         int data;
@@ -16,7 +17,7 @@ public class LinkedList {
         }
     }
 
-    void setLinkedList(List<Integer> nums) {
+    LinkedList setLinkedList(List<Integer> nums) {
         LinkedList llist = new LinkedList();
         Node temp = new Node(0);
         llist.head = new Node(nums.get(0));
@@ -29,8 +30,7 @@ public class LinkedList {
             temp = temp.next;
         }
 
-        llist.printList(llist);
-        System.out.println();
+        return llist;
 
     }
 
@@ -59,13 +59,17 @@ public class LinkedList {
         LinkedList list_a = new LinkedList();
         // list_a.printListInteger(list_1);
         // list_a.setLinkedList(list_1);
-        list_a.setLinkedList(list_1);
+        list_a = list_a.setLinkedList(list_1);
+        list_a.printList(list_a);
+        System.out.println();
 
         // [4, 3, 1, 10, 5, 7, 6, 8, 9];
         List<Integer> list_2 = Arrays.asList(4, 3, 1, 10, 5, 7, 6, 8, 9);
 
         LinkedList list_b = new LinkedList();
         // list_b.printListInteger(list_2);
-        list_b.setLinkedList(list_2);
+        list_b = list_b.setLinkedList(list_2);
+        list_b.printList(list_b);
+        System.out.println();
     }
 }
