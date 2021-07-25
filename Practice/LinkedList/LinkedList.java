@@ -52,13 +52,11 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-        // ArrayList<Integer> firstList = new ArrayList<>();
         // [2, 4, 1, 5, 3, 7, 10, 8, 9];
         List<Integer> list_1 = Arrays.asList(2, 4, 1, 5, 3, 7, 10, 8, 9);
 
         LinkedList list_a = new LinkedList();
-        // list_a.printListInteger(list_1);
-        // list_a.setLinkedList(list_1);
+
         list_a = list_a.setLinkedList(list_1);
         list_a.printList(list_a);
         System.out.println();
@@ -67,7 +65,6 @@ public class LinkedList {
         List<Integer> list_2 = Arrays.asList(4, 3, 1, 10, 5, 7, 6, 8, 9);
 
         LinkedList list_b = new LinkedList();
-        // list_b.printListInteger(list_2);
         list_b = list_b.setLinkedList(list_2);
         list_b.printList(list_b);
         System.out.println();
