@@ -34,6 +34,76 @@ public class LinkedList {
 
     }
 
+    // adding node
+    public void addNode(int data) {
+        if (head == null) {
+            head = new Node(data);
+            return;
+        }
+
+        Node curr = head;
+        while (curr.next != null) {
+            curr = curr.next;
+        }
+
+        Node newNode = new Node(date);
+        curr.next = newNode;
+    }
+
+    // take first and last linkedlist
+    Node partitionLast(Node start, Node end) {
+        if (start == end || start == null || end == null) {
+            return start;
+        }
+
+        Node pivot_prev = start;
+        Node curr = start;
+        int pivot = end.data;
+
+        // iterate till one before the end, the end is pivot
+        while (start != end) {
+            if (start.data < pivot) {
+                pivot_prev = curr;
+                int temp = curr.data;
+                curr.data = start.data;
+                start.data = temp;
+                curr = curr.next;
+            }
+            start = start.next;
+        }
+
+        // swap the position of curr
+        int temp = curr.data;
+        curr.data = pivot;
+        end.data = temp;
+
+        // return one previous to current
+        // because current is now pointing to pivot
+        return pivot_prev;
+
+    }
+
+    public void sort(Node start, Node end) {
+        if (start == null || start == end || start == end.next) {
+            return;
+        }
+
+        // split list and partition recurse
+        Node pivot_prev = partitionLast(start, end);
+        sort(start, end);
+
+        // if pivot is picked and moved to the start,
+        // that means start and pivot is same
+        // so pick from next of pivot
+        if (pivot_prev != null && pivot_prev == start) {
+            sort(pivot_prev.next, end);
+        }
+
+        // if pivot is in between of the last
+        // start from next of pivot
+        //
+    }
+
     public void printList(LinkedList llist) {
         Node n = llist.head;
         while (n != null) {
