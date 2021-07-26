@@ -46,7 +46,7 @@ public class LinkedList {
             curr = curr.next;
         }
 
-        Node newNode = new Node(date);
+        Node newNode = new Node(data);
         curr.next = newNode;
     }
 
