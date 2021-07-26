@@ -97,11 +97,13 @@ public class LinkedList {
         // so pick from next of pivot
         if (pivot_prev != null && pivot_prev == start) {
             sort(pivot_prev.next, end);
+        } else if (pivot_prev != null && pivot_prev.next != null) {
+            // if pivot is in between of the last
+            // start from next of pivot
+            // since we have pivot_prev, so we move two nodes
+            sort(pivot_prev.next.next, end);
         }
 
-        // if pivot is in between of the last
-        // start from next of pivot
-        //
     }
 
     public void printList(LinkedList llist) {
