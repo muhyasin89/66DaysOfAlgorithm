@@ -1,10 +1,7 @@
+package InterviewPreparation.LeetCode.Tree.PathSum2;
 
-/**
- * Definition for a binary tree node.
- */
-
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class TreeNode {
     int val;
@@ -24,35 +21,33 @@ public class TreeNode {
         this.right = right;
     }
 
-    public void pathSum(TreeNode root, int sum, List<Integer> cur, List<List<Integer>> ret) {
-        if (root == null) {
+    public void getLeafPathSum(TreeNode root, List<List<Integer>> Olist, List<Integer> list, int targetSum) {
+        if (root == null)
+            return;
+        if (root.left == null && root.right == null) {
+            if (targetSum - root.val == 0) {
+                list.add(root.val);
+                Olist.add(new ArrayList<Integer>(list));
+                list.remove(list.size() - 1);
+            }
             return;
         }
+        list.add(root.val);
 
-        cur.add(root.val);
-        if (root.left == null && root.right == null && root.val == sum) {
-            ret.add(new ArrayList<Integer>(cur));
-        }
+        getLeafPathSum(root.left, Olist, list, targetSum - root.val);
+        getLeafPathSum(root.right, Olist, list, targetSum - root.val);
 
-        pathSum(root.left, sum - root.val, cur, ret);
-        pathSum(root.right, sum - root.val, cur, ret);
-        System.out.println("Inside complete cur:" + cur + " ret" + ret);
-        cur.remove(cur.size() - 1);
+        System.out.println("Inside half complete list" + list + " Olist:" + Olist);
+        list.remove(list.size() - 1);
     }
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
-        int sum = targetSum;
-        List<List<Integer>> ret = new ArrayList<List<Integer>>();
-        List<Integer> cur = new ArrayList<Integer>();
-
-        pathSum(root, sum, cur, ret);
-        System.out.println("Inside half complete cur:" + cur + " ret" + ret);
-
-        return ret;
+        List<List<Integer>> output = new ArrayList<List<Integer>>();
+        getLeafPathSum(root, output, new ArrayList<Integer>(), targetSum);
+        return output;
     }
 
     public static void main(String[] args) {
-        System.out.println("welcome");
 
         int sum = 22;
 
@@ -69,10 +64,10 @@ public class TreeNode {
         root.right.right.left = new TreeNode(5);
         root.right.right.right = new TreeNode(1);
 
-        System.out.println("wew");
         TreeNode tree = new TreeNode();
 
         System.out.println(tree.pathSum(root, sum));
         // [[5,4,11,2],[5,8,4,5]]
     }
+
 }
