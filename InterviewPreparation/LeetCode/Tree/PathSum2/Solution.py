@@ -19,7 +19,7 @@ def pathSum(root, sum, cur, ret):
     pathSum(root.left, sum - root.val, cur, ret)
     pathSum(root.right, sum - root.val, cur, ret)
 
-    cur.pop()  # remove last element in cur list
+    cur.pop()  # remove last element in cur list and it destroy everything
 
 
 if __name__ == "__main__":

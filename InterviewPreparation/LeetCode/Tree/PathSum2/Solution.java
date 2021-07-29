@@ -69,7 +69,6 @@ public class TreeNode {
         root.right.right.left = new TreeNode(5);
         root.right.right.right = new TreeNode(1);
 
-        System.out.println("wew");
         TreeNode tree = new TreeNode();
 
         System.out.println(tree.pathSum(root, sum));
