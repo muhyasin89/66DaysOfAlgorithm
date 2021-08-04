@@ -69,8 +69,6 @@ def mergeSort(arr):
 def partition(start, end, arr):
     pivot_index = start
     pivot = arr[pivot_index]
-    # print("pivot", pivot_index)
-    # print("arr", arr[pivot_index])
 
     while start < end:
         while start < len(arr) and arr[start] <= pivot:

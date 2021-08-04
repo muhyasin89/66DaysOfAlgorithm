@@ -93,6 +93,18 @@ def changeListIntoLinkedList(arr):
     return LinkedList(arr[0], changeListIntoLinkedList(arr[1:]))
 
 
+def reverseLinkedList(head):
+    prev = None
+    curr = head
+    while curr != None:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+
+    head = prev
+
+
 def printLinkedList(linked_list):
     curr = linked_list
     while curr:
@@ -110,3 +122,57 @@ print(printLinkedList(linked_list))
 
 insert_linked = changeListIntoLinkedList(insert)
 print(printLinkedList(insert_linked))
+
+"""
+===============================================
+||||||||||||||    Tree Section      |||||||||||
+===============================================
+"""
+
+
+class Tree:
+    def __init__(self, data=0, left=None, right=None):
+        self.data = data
+        self.left = left
+        self.right = right
+
+
+def sortedArrIntoBST(arr):
+    if not arr:
+        return None
+
+    mid = len(arr) // 2
+    root = Tree(arr[mid])
+    root.left = sortedArrIntoBST(arr[:mid])
+    root.right = sortedArrIntoBST(arr[(mid + 1) :])
+    return root
+
+
+def preOrder(head):
+    if head == None:
+        return []
+
+    left = preOrder(head.left)
+    right = preOrder(head.right)
+
+    return [head.data] + left + right
+
+
+def inOrder(head):
+    if head == None:
+        return []
+
+    left = inOrder(head.left)
+    right = inOrder(head.right)
+
+    return left + [head.data] + right
+
+
+def postOrder(head):
+    if head == None:
+        return []
+
+    left = postOrder(head.left)
+    right = postOrder(head.right)
+
+    return left + right + [head.data]
