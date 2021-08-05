@@ -118,7 +118,7 @@ public class LinkedList {
         for (Integer s : nums) {
             int i = nums.indexOf(s);
             System.out.print("-> " + s);
-            // System.out.println("Item " + i + " : " + s);
+            System.out.println("Item " + i + " : " + s);
         }
         System.out.println();
     }
