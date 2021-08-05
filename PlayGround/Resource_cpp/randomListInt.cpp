@@ -1,19 +1,24 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <list>
 #include <ctime>
 
 using namespace std;
 
 void randomNumberGen(int max, int n);
+void printList();
 
 int main()
 {
     int max = 20;
     int n = 10;
+    list<int> number;
 
     srand(time(NULL));
-    randomNumberGen(max, n);
+    // list<int> number = randomNumberGen(max, n);
+
+    // printList(list<int> number);
 
     return 0;
 }
@@ -21,10 +26,24 @@ int main()
 void randomNumberGen(int max, int n)
 {
     int max_number = max;
-    int number[n];
-    for (int i = 0; i < 10; i++)
+    int rand_int;
+    list<int> number;
+
+    for (int i = 0; i < number.size(); i++)
     {
-        number[i] = rand() % max_number;
-        std::cout << number[i] << std::endl;
+        rand_int = rand() % max_number;
+        number.push_front(rand_int);
     }
+}
+
+void printList(list<int> number)
+{
+    list<int>::iterator it;
+
+    for (it = number.begin(); it != number.end(); ++it)
+    {
+        std::cout << *it;
+    }
+
+    std::cout << std::endl;
 }
