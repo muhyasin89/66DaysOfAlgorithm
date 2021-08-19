@@ -22,6 +22,10 @@ def BubbleSorted(arr):
     return arr
 
 
+def quick_sort(arr):
+    p = partition(0, len(arr) - 1, arr)
+
+
 def get_random_list(n):
     arr = []
 
@@ -103,6 +107,8 @@ def reverseLinkedList(head):
         curr = next
 
     head = prev
+
+    return head
 
 
 def printLinkedList(linked_list):

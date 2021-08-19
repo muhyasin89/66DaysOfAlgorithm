@@ -3,23 +3,22 @@ class Position:
         self.val = val
 
 
+def change_to_position(pos, initial=True):
+    if initial:
+        return Position(pos.val) if isinstance(pos, Position) else Position(pos)
+    else:
+        return pos if isinstance(pos, Position) else Position(pos)
+
+
 def quickSort(start, end, arr):
 
     n = len(arr)
 
-    start = (
-        Position(start.val) if isinstance(start, Position) else Position(start)
-    )
-    left = (
-        Position(start.val) if isinstance(start, Position) else Position(start)
-    )
-    right = (
-        Position(start.val) if isinstance(start, Position) else Position(start)
-    )
-    mid = (
-        Position(start.val) if isinstance(start, Position) else Position(start)
-    )
-    end = Position(end.val) if isinstance(end, Position) else Position(end)
+    start = change_to_position(start)
+    left = change_to_position(start)
+    right = change_to_position(start)
+    mid = change_to_position(start)
+    end = change_to_position(end)
 
     if start.val > end.val:
         return
@@ -47,45 +46,19 @@ def quickSort(start, end, arr):
 
         # mid, right
         arr[mid.val], arr[right.val] = arr[right.val], arr[mid.val]
-        start = start if isinstance(start, Position) else Position(start)
-        left = left if isinstance(left, Position) else Position(left)
-        mid = mid if isinstance(mid, Position) else Position(mid)
-        end = end if isinstance(end, Position) else Position(end)
+        start = change_to_position(start, False)
+        left = change_to_position(left, False)
+        mid = change_to_position(mid, False)
+        end = change_to_position(end, False)
 
         quickSort(start.val, left.val - 1, arr)
         quickSort(mid.val + 1, end.val, arr)
 
+    return arr
 
-# arr = [2, 3, 4, 1, 2, 4, 3, 5, 5, 2, 2, 2, 1, 1, 1, 6, 7]
-arr = [
-    400000,
-    400000,
-    400000,
-    2000000,
-    2000000,
-    2000000,
-    2000000,
-    2000000,
-    2000000,
-    2000000,
-    2000000,
-    2000000,
-    2000000,
-    2500000,
-    2500000,
-    2500000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-    3000000,
-]
 
-quickSort(0, len(arr) - 1, arr)
+arr = [2, 3, 4, 1, 2, 4, 3, 5, 5, 2, 2, 2, 1, 1, 1, 6, 7]
+
+
+arr = quickSort(0, len(arr) - 1, arr)
 print(arr)
