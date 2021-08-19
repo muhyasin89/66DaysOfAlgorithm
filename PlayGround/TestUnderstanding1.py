@@ -28,21 +28,16 @@ def bubble_sort(array):
 
 
 def partition(start, end, arr):
-    pivot_index = start
-    pivot = arr[pivot_index]
+    pivot = arr[end]
+    i = start - 1
 
-    while start < end:
-        while start < len(arr) and arr[start] <= pivot:
-            start += 1
+    for j in range(start, end):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[end] = arr[end], arr[i + 1]
 
-        while arr[end] > pivot:
-            end -= 1
-
-        if start < end:
-            arr[start], arr[end] = arr[end], arr[start]
-    arr[end], arr[pivot_index] = arr[pivot_index], arr[end]
-
-    return end
+    return i + 1
 
 
 def quickSort(start, end, arr):
@@ -104,10 +99,6 @@ def append_node(new_node, linked_list):
 
     curr = new_node
     curr.next = None
-
-
-def insert_after(prev_node, new_data, linked_list):
-    pass
 
 
 def changeLinkedListToArray(head):

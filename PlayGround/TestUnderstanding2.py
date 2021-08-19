@@ -22,8 +22,50 @@ def BubbleSorted(arr):
     return arr
 
 
-def quick_sort(arr):
-    p = partition(0, len(arr) - 1, arr)
+def partition(start, end, arr):
+    pivot = arr[end]
+    i = start - 1
+
+    for j in range(start, end):
+        if arr[j] <= pivot:
+            i += 1
+
+            arr[j], arr[i] = arr[i], arr[j]
+
+    arr[i + 1], arr[end] = arr[end], arr[i + 1]
+
+    return i + 1
+
+
+def partitionReverse(start, end, arr):
+    pivot = arr[end]
+    i = start - 1
+
+    for j in range(start, end):
+        if arr[j] >= pivot:
+            i += 1
+
+            arr[j], arr[i] = arr[i], arr[j]
+
+    arr[i + 1], arr[end] = arr[end], arr[i + 1]
+
+    return i + 1
+
+
+def quickSort(start, end, arr=[], reverse=False):
+    if reverse:
+        if start > end:
+            p = partitionReverse(start, end, arr)
+            quickSort(p + 1, end, arr)
+            quickSort(start, p - 1, arr)
+
+    else:
+        if start < end:
+            p = partition(start, end, arr)
+            quickSort(start, p - 1, arr)
+            quickSort(p + 1, end, arr)
+
+    return arr
 
 
 def get_random_list(n):
@@ -44,24 +86,16 @@ def insert_list_beginning(arr, insert):
     return arr
 
 
-def testing_with_list(arr, insert):
+def testing_with_list(arr):
     print("first random arr", arr)
 
-    print("insert arr", insert)
+    sorted_arr = quickSort(0, len(arr) - 1, arr)
+    print("Sort", sorted_arr)
 
-    reversed_sort = reversedBubbleSorted(arr)
-    print(reversed_sort)
-
-    sorted_arr = BubbleSorted(arr)
-    print(sorted_arr)
-
-    print(insert_list_beginning(arr, insert))
-
-    sorted_arr = BubbleSorted(arr)
-    print(sorted_arr)
+    print("Reverse Sort", sorted_arr[::-1])
 
     remove_duplicate = list(dict.fromkeys(arr))
-    # print(remove_duplicate)
+    print(remove_duplicate)
 
     return remove_duplicate
 
@@ -69,16 +103,8 @@ def testing_with_list(arr, insert):
 n = 10
 
 arr = get_random_list(n)
-insert = get_random_list(n)
 
-# arr = testing_with_list(arr, insert)
-
-# insert_list_beginning(arr, insert)
-print(arr)
-
-
-print("============|LinkedList Section|================")
-# LinkedList section
+arr = testing_with_list(arr)
 
 
 class LinkedList:
@@ -126,8 +152,8 @@ linked_list = changeListIntoLinkedList(arr)
 print(printLinkedList(linked_list))
 
 
-insert_linked = changeListIntoLinkedList(insert)
-print(printLinkedList(insert_linked))
+# insert_linked = changeListIntoLinkedList(insert)
+# print(printLinkedList(insert_linked))
 
 """
 ===============================================
