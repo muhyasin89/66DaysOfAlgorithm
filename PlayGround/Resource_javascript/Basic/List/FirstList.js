@@ -20,3 +20,6 @@ let fistHashMap = new Map([
 console.log(fistHashMap);
 console.log(fistHashMap.has(1));
 console.log(fistHashMap.get(1));
+
+// add in list
+
