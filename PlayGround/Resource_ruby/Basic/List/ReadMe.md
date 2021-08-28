@@ -9,3 +9,7 @@ array.find_index { |each| each == element } > 0
 array.any? { |each| each == element }
 array.find { |each| each == element } != nil
 array.detect { |each| each == element } != ni
+
+Array.shift
+Array.pop
+Array.delete_at(index)
