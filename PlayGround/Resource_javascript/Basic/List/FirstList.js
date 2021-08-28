@@ -23,3 +23,6 @@ console.log(fistHashMap.get(1));
 
 // add in list
 
+console.log(fistHashMap["1"] !== undefined)
+
+console.log(!("1" in fistHashMap))

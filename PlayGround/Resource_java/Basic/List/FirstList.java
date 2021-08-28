@@ -83,5 +83,14 @@ public class FistList {
         for (String i : new_s_list) {
             System.out.print(i);
         }
+
+        System.out.println();
+
+        HashMap<Integer, Integer> hash_int = new HashMap<Integer, Integer>();
+        HashMap<String, String> hash_str = new HashMap<String, String>();
+        hash_int.put(1, 7);
+        hash_int.put(2, 5);
+        hash_int.put(3, 4);
+        System.out.print(hash_int);
     }
 }

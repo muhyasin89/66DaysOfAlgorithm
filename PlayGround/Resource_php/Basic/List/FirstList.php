@@ -11,7 +11,6 @@ function printList($arr)
     foreach ($arr as $item) {
         echo $item . " ";
     }
-
     echo "\n";
 }
 
@@ -26,14 +25,13 @@ function swap($start, $end, $arr)
 }
 
 $arr = swap(0, 1, $my_array);
-printList($arr);
 
+printList($arr);
 echo array_search(1, $my_array) . "\n";
 
 
 $string_a = "IniStringPertama";
 $arr_a = str_split($string_a);
-
 
 printList($arr_a);
 echo implode("", $arr_a) . "\n";
