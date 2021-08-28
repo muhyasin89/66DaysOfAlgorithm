@@ -59,3 +59,22 @@ echo "============separator================\n";
 print_r(array_key_exists("1", $myhashmap) . "\n");
 
 echo (in_array('first', $myhashmap) . "\n");
+
+$list_str = "Hello World";
+$arr_str = explode(" ", $list_str);
+var_dump($arr_str);
+
+print_r(str_split($arr_str[0]));
+
+
+$palind = str_split("aabcbaa");
+$len = count($palind);
+
+$left = array_slice($palind, 0, floor($len / 2));
+$right = array_slice($palind, floor($len / 2));
+
+if (count($left) != count($right)) {
+    array_shift($right);
+}
+var_dump($left);
+var_dump($right);

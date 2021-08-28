@@ -25,4 +25,6 @@ console.log(fistHashMap.get(1));
 
 console.log(fistHashMap["1"] !== undefined)
 
-console.log(!("1" in fistHashMap))
+console.log(!("1" in fistHashMap));
+
+let list_str = "wew";

@@ -82,6 +82,17 @@ public class Example {
         }
     }
 
+    List changeStringtoList(String a, List b) {
+
+        char arr[] = a.toCharArray();
+
+        for (Character item : arr) {
+            b.add(item);
+        }
+
+        return b;
+    }
+
     public static void main(String args[]) {
 
         List<Integer> i_list = new ArrayList<Integer>();
@@ -96,15 +107,24 @@ public class Example {
         s_list = curr_class.stringValue(s_list);
         s_list.add("end");
         i_list.add(4);
+        String wew = new String("Hello World");
+        List<String> str2_list = new ArrayList<String>(Arrays.asList(wew.split(" ")));
+        List<String> str3_list = new ArrayList<String>();
+
+        str3_list = curr_class.changeStringtoList(str2_list.get(0), str3_list);
+
+        System.out.print(str3_list);
+        System.out.print(str2_list);
 
         // new_i_list = curr_class.removeElement(new_i_list, 2);
 
-        int getIntIndex = Arrays.asList(i_list).indexOf(3);
-        int getStrIndex = Arrays.asList(s_list).indexOf("Banana");
-        int getStr1Index = Arrays.asList(new_s_list).indexOf("Ford");
+        // int getIntIndex = Arrays.asList(i_list).indexOf(3);
+        // int getStrIndex = Arrays.asList(s_list).indexOf("Banana");
+        // int getStr1Index = Arrays.asList(new_s_list).indexOf("Ford");
 
-        System.out.println(
-                "i_list:3 ->" + getIntIndex + " s_list:banana->" + getStrIndex + " new_s_list:Ford-> " + getStr1Index);
+        // System.out.println(
+        // "i_list:3 ->" + getIntIndex + " s_list:banana->" + getStrIndex + "
+        // new_s_list:Ford-> " + getStr1Index);
 
         // curr_class.printIntList(i_list);
         // curr_class.printStrList(s_list);
