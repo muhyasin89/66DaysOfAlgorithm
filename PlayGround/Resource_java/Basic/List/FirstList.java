@@ -92,5 +92,18 @@ public class FistList {
         hash_int.put(2, 5);
         hash_int.put(3, 4);
         System.out.print(hash_int);
+
+        Map<Integer, String> map_words = new HashMap<>();
+        map_words.put(1, "a");
+        map_words.put(2, "b");
+        map_words.put(3, "c");
+        System.out.println(map_words);
+
+        boolean check_key = map_words.containsKey("c");
+        boolean check_val = map_words.containsValue("c");
+
+        System.out.println(check_key);
+        System.out.println(check_val);
+
     }
 }

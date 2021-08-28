@@ -35,3 +35,10 @@ https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/
 PreOrder, InOrder, PostOrder
 https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 https://stackoverflow.com/questions/49063499/inorder-traversal-of-tree-in-python-returning-a-list
+
+Question:
+permutations
+https://leetcode.com/problems/permutations/
+https://leetcode.com/problems/combinations/
+
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/

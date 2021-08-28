@@ -54,3 +54,8 @@ printHashMap($myhashmap);
 print_r(array_keys($myhashmap));
 print_r($my_array);
 printYield($my_array);
+
+echo "============separator================\n";
+print_r(array_key_exists("1", $myhashmap) . "\n");
+
+echo (in_array('first', $myhashmap) . "\n");
