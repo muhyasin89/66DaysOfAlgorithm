@@ -76,6 +76,12 @@ public class Example {
         return copyArray;
     }
 
+    void printHashMap(HashMap<Integer, Integer> map) {
+        for (Map.Entry mapResult : map.entrySet()) {
+            System.out.println(mapResult.getKey() + " = " + mapResult.getValue());
+        }
+    }
+
     public static void main(String args[]) {
 
         List<Integer> i_list = new ArrayList<Integer>();
@@ -130,6 +136,8 @@ public class Example {
         System.out.print(hash_int);
         hash_str.put("a", "b");
         System.out.print(hash_str);
+
+        curr_class.printHashMap(hash_int);
 
         Map<Integer, String> map_words = new HashMap<>();
         map_words.put(1, "a");
