@@ -81,7 +81,9 @@ public class Example {
         List<Integer> i_list = new ArrayList<Integer>();
         List<String> s_list = new ArrayList<String>();
         String[] new_s_list = { "Volvo", "BMW", "Ford", "Mazda" };
+        String[][] new_s_list_1 = new String[][] { { "John", "Mary" }, { "Alice", "Bob" } };
         int[] new_i_list = { 1, 2, 3, 4, 5, 6 };
+        int[][] new_i_list_1 = new int[][] { { 1, 2 }, { 3, 4 } };
 
         Example curr_class = new Example();
         i_list = curr_class.intValue(i_list);
@@ -89,7 +91,7 @@ public class Example {
         s_list.add("end");
         i_list.add(4);
 
-        new_i_list = curr_class.removeElement(new_i_list, 2);
+        // new_i_list = curr_class.removeElement(new_i_list, 2);
 
         int getIntIndex = Arrays.asList(i_list).indexOf(3);
         int getStrIndex = Arrays.asList(s_list).indexOf("Banana");
@@ -100,8 +102,11 @@ public class Example {
 
         // curr_class.printIntList(i_list);
         // curr_class.printStrList(s_list);
-        System.out.print(new_s_list);
-        System.out.print(new_i_list);
+        System.out.print(Arrays.toString(new_s_list));
+        // System.out.print(new_i_list);
+        System.out.println(Arrays.toString(new_i_list));
+        System.out.println(Arrays.deepToString(new_s_list_1));
+        System.out.println(Arrays.deepToString(new_i_list_1));
 
         System.out.print(curr_class.changeToInt(i_list));
         System.out.println();
@@ -123,6 +128,8 @@ public class Example {
         hash_int.put(2, 5);
         hash_int.put(3, 4);
         System.out.print(hash_int);
+        hash_str.put("a", "b");
+        System.out.print(hash_str);
 
         Map<Integer, String> map_words = new HashMap<>();
         map_words.put(1, "a");
