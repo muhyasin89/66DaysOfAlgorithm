@@ -6,9 +6,3 @@ hashmap.delete(<key>) deletes the key/value pair that matches the key that is pa
 hashmap.clear() clears all elements from the hashmap
 
 https://medium.com/@martin.crabtree/javascript-tracking-key-value-pairs-using-hashmaps-7de6df598257
-
-Permutation
-https://www.youtube.com/watch?v=xghJNlMibX4
-
-Combinations
-https://www.youtube.com/watch?v=NA2Oj9xqaZQ
