@@ -1,5 +1,5 @@
-List into LinkedList
-https://stackoverflow.com/questions/31553576/converting-a-list-to-a-linked-list
+stack
+https://www.youtube.com/watch?v=4F-BnR2XwqU
 
 Python convert list to tree representation format
 https://stackoverflow.com/questions/24334146/python-convert-list-to-tree-representation-format
@@ -17,6 +17,9 @@ Combinations
 https://www.youtube.com/watch?v=NA2Oj9xqaZQ
 
 Next Permutation https://www.youtube.com/watch?v=quAS1iydq7U - https://www.youtube.com/watch?v=4wlBBRo4tYY
+
+List into LinkedList
+https://stackoverflow.com/questions/31553576/converting-a-list-to-a-linked-list
 
 LinkedList into Tree
 https://www.geeksforgeeks.org/given-linked-list-representation-of-complete-tree-convert-it-to-linked-representation/
