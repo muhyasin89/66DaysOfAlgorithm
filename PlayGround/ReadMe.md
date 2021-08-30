@@ -7,6 +7,7 @@ https://stackoverflow.com/questions/24334146/python-convert-list-to-tree-represe
 Permutation
 https://www.youtube.com/watch?v=KukNnoN-SoY
 https://www.youtube.com/watch?v=us0cYQXQpxg
+https://www.youtube.com/watch?v=IPWmrjE1_MU
 
 https://www.youtube.com/watch?v=xghJNlMibX4
 
@@ -53,9 +54,17 @@ PreOrder, InOrder, PostOrder
 https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 https://stackoverflow.com/questions/49063499/inorder-traversal-of-tree-in-python-returning-a-list
 
+https://www.youtube.com/watch?v=fPz40W9mfCg
+
+Graph:
+https://www.youtube.com/watch?v=e4RezPkq3UI
+
 Question:
 permutations
 https://leetcode.com/problems/permutations/
 https://leetcode.com/problems/combinations/
 
 https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+
+Dynamic Array
+https://www.youtube.com/watch?v=-zOgsxgnGHg

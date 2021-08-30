@@ -15,8 +15,8 @@ public class TwoSum {
     public static void main(String args[]) {
         int[] arr = new int[] { 2, 7, 11, 15 };
         int n = 6;
-        TwoSum arr_two = new TwoSum();
-        int[] new_arr = arr_two.twoSum(arr, n);
+        TwoSum curr_class = new TwoSum();
+        int[] new_arr = curr_class.twoSum(arr, n);
 
         System.out.print("Sorted array: ");
         Arrays.stream(new_arr).forEach(i -> System.out.print(i + " "));
