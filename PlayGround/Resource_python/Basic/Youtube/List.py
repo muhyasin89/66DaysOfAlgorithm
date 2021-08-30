@@ -45,14 +45,3 @@
 # print("============================")
 # for item_c in combinations_with_replacement([1, 2, 3], 2):
 #     print(item_c)
-
-
-dict_list = {"{": "}", "[": "]", "(": ")"}
-
-
-print("{" in dict_list.keys())
-print("}" in dict_list.values())
-
-
-for key, value in dict_list.items():
-    print("ini key {}: ini value {}".format(key, value))
