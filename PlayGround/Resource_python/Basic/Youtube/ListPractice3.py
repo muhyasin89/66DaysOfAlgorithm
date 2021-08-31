@@ -74,7 +74,7 @@ def removeCompletePair(list_pair):
 
                 list_result.append(list_pair[i])
 
-    if list_result:
+    if len(list_result):
         removeCompletePair(list_result)
 
     return True
