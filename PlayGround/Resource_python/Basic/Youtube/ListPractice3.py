@@ -53,50 +53,37 @@ inp_str2 = "{(][)}"  # expected False
 inp_str3 = "]["  # expected False
 
 
-def removeCompleteClosure(list_str1):
+def removeCompletePair(list_pair):
     list_result = []
-    for i in range(0, len(list_str1)):
-        if list_str1[i] in dict_arr.values() and i >= 1:
-            if list_str1[i - 1] in dict_arr.keys():
-                if dict_arr[list_str1[i - 1]] != list_str1[i]:
+    if len(list_pair) == 1:
+        return False
+
+    for i in range(len(list_pair)):
+        if list_pair[i] in dict_arr.values() and i < 1:
+            return False
+        else:
+            if (
+                list_pair[i] in dict_arr.values()
+                and list_pair[i - 1] in dict_arr.keys()
+            ):
+                if dict_arr[list_pair[i - 1]] != list_pair[i]:
                     return False
                 else:
-                    list_result.pop(len(list_result) - 1)
+                    list_result.pop(-1)
             else:
-                list_result.append(list_str1[i])
-        else:
-            list_result.append(list_str1[i])
 
-    return list_result
+                list_result.append(list_pair[i])
+
+    if list_result:
+        removeCompletePair(list_result)
+
+    return True
 
 
 def checkClosure(inp):
-    list_str = list(inp)
+    list_inp = list(inp)
 
-    if len(list_str) == 0:
-        return True
-
-    if len(list_str) % 2 != 0:
-        return False
-
-    mid = len(list_str) // 2
-    left = list_str[:mid]
-    right = list_str[mid:]
-
-    left = removeCompleteClosure(left)
-    right = removeCompleteClosure(right)
-
-    print("{}: {}".format(left, right))
-    if not left or not right:
-        return False
-
-    for i in range(len(left)):
-        if left[i] in dict_arr.values():
-            return False
-
-        if dict_arr[left[i]] != right[len(right) - i - 1]:
-            return False
-    return True
+    return removeCompletePair(list_inp)
 
 
 print(checkClosure(inp_str))
