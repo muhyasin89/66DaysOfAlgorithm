@@ -19,6 +19,9 @@ https://www.youtube.com/watch?v=NA2Oj9xqaZQ
 
 Next Permutation https://www.youtube.com/watch?v=quAS1iydq7U - https://www.youtube.com/watch?v=4wlBBRo4tYY
 
+Recursive LinkedList
+https://www.youtube.com/watch?v=8GtdXAqaQHg
+
 List into LinkedList
 https://stackoverflow.com/questions/31553576/converting-a-list-to-a-linked-list
 
