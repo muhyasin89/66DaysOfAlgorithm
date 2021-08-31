@@ -68,3 +68,6 @@ https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 
 Dynamic Array
 https://www.youtube.com/watch?v=-zOgsxgnGHg
+
+Intro to Binary Trees and Breadth First Traversal
+https://www.youtube.com/watch?v=dfaKCrJ2HAk
