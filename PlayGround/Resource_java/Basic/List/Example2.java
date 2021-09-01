@@ -1,14 +1,18 @@
 import java.util.*;
 
-public class List {
+public class Example2 {
 
     public static void main(String args[]) {
-        List curr_class = new List();
+        Example2 curr_class = new Example2();
 
         String a = "Hello World";
+        int a_int = 112233;
         System.out.println(a);
+        String a_str = String.valueOf(a_int);
 
         ArrayList<Character> list_a = new ArrayList<Character>();
+        ArrayList<Character> list_b = new ArrayList<Character>();
+        ArrayList<Integer> list_c = new ArrayList<Integer>();
 
         String b = a.replaceAll("\\s+", "");
 
@@ -16,7 +20,14 @@ public class List {
             list_a.add(b.charAt(i));
         }
 
+        for (int i = 0; i < a_str.length(); i++) {
+            list_b.add(a_str.charAt(i));
+            list_c.add(Character.getNumericValue(a_str.charAt(i)));
+        }
+
         System.out.println(list_a);
+        System.out.println(list_b);
+        System.out.println(list_c);
 
         list_a.remove(2);
         System.out.println(list_a);
