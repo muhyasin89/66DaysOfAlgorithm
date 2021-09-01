@@ -6,41 +6,42 @@ arr = ["ar1r", "a", "fe2", "ef", "cc", "bb", "ba"]
 # expected ["ar1r", "a", "fe2", "ef", "ba"]
 
 
-def checkPalindrome(item):
-    # change string to list
-    list_item = list(item)
-    mid = len(list_item) // 2
+def checkPalindrome(str1):
+    list_str1 = list(str1)
 
-    left = list_item[:mid]
-    right = list_item[mid:]
+    mid = len(list_str1) // 2
+    left = list_str1[:mid]  # ['f', 'e',]
+    right = list_str1[mid:]  # [ ''2', e', 'f'] ->pop-> [ 'e', 'f']
 
     if len(left) != len(right):
         right.pop(0)
 
     for i in range(len(left)):
-        if left[i] != right[len(right) - i - 1]:
+        if left[i] != right[len(left) - i - 1]:
             return False
 
     return True
 
 
 def checkCombination(arr):
-    result_list = []
     list_combinations = list(combinations(arr, 2))
 
-    for str1, str2 in list_combinations:
-        # if item is palindrome add to result list
-        str_item = str1 + str2
-        if checkPalindrome(str_item):
-            if str1 not in result_list:
-                result_list.append(str1)
-            if str2 not in result_list:
-                result_list.append(str2)
+    result_list = []
+
+    for item1, item2 in list_combinations:
+        str_result = item1 + item2
+        # check palindrome
+        # if palindrome append ke result list
+        if checkPalindrome(str_result):
+            if item1 not in result_list:
+                result_list.append(item1)
+            if item2 not in result_list:
+                result_list.append(item2)
 
     return result_list
 
 
-print(checkCombination(arr))
+# print(checkCombination(arr))
 
 
 # practice 2
@@ -52,7 +53,40 @@ inp_str2 = "{(][)}"  # expected False
 inp_str3 = "]["  # expected False
 
 
-# print(checkClosure(inp_str))
-# print(checkClosure(inp_str1))
-# print(checkClosure(inp_str2) is False)
-# print(checkClosure(inp_str3) is False)
+def validClosure(list_pair):
+    list_result = []
+    if len(list_pair) == 1:
+        return False
+
+    for i in range(len(list_pair)):
+        if list_pair[i] in dict_arr.values() and i < 1:
+            return False
+        else:
+            if (
+                list_pair[i] in dict_arr.values()
+                and list_pair[i - 1] in dict_arr.keys()
+            ):
+                if dict_arr[list_pair[i - 1]] != list_pair[i]:
+                    return False
+                else:
+                    list_result.pop(-1)
+            else:
+
+                list_result.append(list_pair[i])
+
+    if len(list_result):
+        validClosure(list_result)
+
+    return True
+
+
+def checkClosure(inp):
+    list_inp = list(inp)
+
+    return validClosure(list_inp)
+
+
+print(checkClosure(inp_str))
+print(checkClosure(inp_str1))
+print(checkClosure(inp_str2) is False)
+print(checkClosure(inp_str3) is False)

@@ -68,3 +68,7 @@ https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 
 Dynamic Array
 https://www.youtube.com/watch?v=-zOgsxgnGHg
+
+ES6
+https://www.youtube.com/watch?v=WZQc7RUAg18
+https://blog.alexdevero.com/es6-es7-es8-modern-javascript-pt6/
