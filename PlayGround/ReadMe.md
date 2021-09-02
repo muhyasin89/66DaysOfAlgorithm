@@ -74,3 +74,15 @@ https://www.youtube.com/watch?v=-zOgsxgnGHg
 
 Intro to Binary Trees and Breadth First Traversal
 https://www.youtube.com/watch?v=dfaKCrJ2HAk
+
+=============
+Type Sorting+
+=============
+Quick Sort.
+Bubble Sort.
+Merge Sort.
+Insertion Sort.
+Selection Sort.
+Heap Sort.
+Radix Sort.
+Bucket Sort.
