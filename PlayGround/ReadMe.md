@@ -78,11 +78,28 @@ https://www.youtube.com/watch?v=dfaKCrJ2HAk
 =============
 Type Sorting+
 =============
-Quick Sort.
-Bubble Sort.
-Merge Sort.
-Insertion Sort.
-Selection Sort.
-Heap Sort.
-Radix Sort.
-Bucket Sort.
+Quick Sort
+Bubble Sort
+Merge Sort
+Insertion Sort
+Selection Sort
+Heap Sort
+Radix Sort
+Bucket Sort
+
+==============================================
+
+- Tree traversal
+- Binary search tree
+- Recursive function
+- Iterative algorithm
+- Stacks and queues
+- Object oriented programming
+- Data structures (Hashmaps, graphs, etc.)
+
+===============================================
+
+- Pointers in C or C++
+- Sorting algorithms
+- Strings and how to navigate through them (Some types: palindrome, anagram)
+- Dynamic programming
