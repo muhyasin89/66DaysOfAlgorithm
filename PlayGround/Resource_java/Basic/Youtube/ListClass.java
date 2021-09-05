@@ -2,13 +2,15 @@ import java.lang.ref.Cleaner;
 import java.lang.reflect.Array;
 import java.util.*;
 
+import javax.lang.model.element.Element;
+
 public class ListClass {
 
     public static void main(String args[]) {
         String str_a = "Hello World";
         // String[] str_a1 = { "Hello World" };
         // String[][] str_a11 = { { "Hello" }, { "Word" } };
-        Integer int_a = 12345;
+        Integer int_a = 1122345;
         String str_int_a = String.valueOf(int_a);
 
         System.out.println(str_a);
@@ -41,5 +43,25 @@ public class ListClass {
 
         System.out.println(left);
         System.out.println(right);
+
+        System.out.println(right.contains('l'));
+
+        ArrayList<Integer> listWithoutDuplicates = new ArrayList<Integer>();
+
+        for (Integer a : list_int_a) {
+            if (!listWithoutDuplicates.contains(a)) {
+                listWithoutDuplicates.add(a);
+            }
+        }
+
+        System.out.println(listWithoutDuplicates);
+
+        HashMap<Integer, String> map = new HashMap<Integer, String>();
+        map.put(1, "Hello");
+        map.put(2, "word");
+        map.put(3, "everyone");
+
+        System.out.println(map.containsKey(3));
+        System.out.println(map.containsValue("word"));
     }
 }
