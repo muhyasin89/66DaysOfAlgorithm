@@ -135,4 +135,20 @@ class ShoppingListClass{
 
 const myList = new ShoppingListClass(['milk', 'apple', 'pear', 'soy milk'], 4);
 
+console.log(myList)
+
 myList.sayList();
+
+class Product extends ShoppingListClass{
+    constructor(items, nr, ammount, cost){
+        super(items, nr)
+        this.ammount = ammount;
+        this.cost = cost;
+    }
+}
+
+const ProductList = new Product(['milk', 'apple', 'pear', 'soy milk'], 4, 2, 40000);
+
+console.log(ProductList);
+
+ProductList.sayList();
