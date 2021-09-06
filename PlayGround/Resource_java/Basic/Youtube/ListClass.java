@@ -44,5 +44,25 @@ public class ListClass {
         System.out.println(left);
         System.out.println(right);
 
+        System.out.println(right.contains('l'));
+
+        ArrayList<Integer> listWithoutDuplicates = new ArrayList<Integer>();
+
+        for (Integer a : list_int_a) {
+            if (!listWithoutDuplicates.contains(a)) {
+                listWithoutDuplicates.add(a);
+            }
+        }
+
+        System.out.println(listWithoutDuplicates);
+
+        HashMap<Integer, String> map = new HashMap<Integer, String>();
+        map.put(1, "Hello");
+        map.put(2, "word");
+        map.put(3, "everyone");
+
+        System.out.println(map.containsKey(3));
+        System.out.println(map.containsValue("word"));
+
     }
 }
