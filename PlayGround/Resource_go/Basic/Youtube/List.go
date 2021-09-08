@@ -16,7 +16,11 @@
 
 // check index space
 
+// remove duplicate
+
 // remove space in list
+
+// cut list into 2 left and right
 
 // make hash map
 
