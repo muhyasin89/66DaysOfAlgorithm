@@ -1,29 +1,46 @@
 // make string "Hello World" and string "11223344"
 
+
 // turn string into list
 
-// turn list int into list
 
-// turn list into string
+// turn list string into list int
 
-// swap list
-
-// make another list
-
-// merge 2 list with same type
-
-// check if 'k' inside list
-
-// check index space
 
 // remove duplicate
 
+
+// turn list into string
+
+
+// check index space
+
+
 // remove space in list
+
+
+// swap list
+
+
+// make another list
+
+
+// merge 2 list with same type
+
+
+// check if 'k' inside list
+
 
 // cut list into 2 left and right
 
+
 // make hash map
 
+
 // check if n in keys
+
+
+// get second value
+
 
 // check if n in values
