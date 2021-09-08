@@ -1,55 +1,29 @@
-# a = "Hello World"
-# b = 342561
+# make string "Hello World" and string "11223344"
 
-# list_a = a.split(" ")
-# print(list_a)
+# turn string into list
 
-# list_c = list(list_a[0])
-# print(list_c)
+# turn list int into list
 
-# list_c.pop(2)
-# print(list_c)
+# turn list into string
 
-# list_c[1], list_c[2] = list_c[2], list_c[1]
-# print(list_c)
+# swap list
 
-# mid = len(list_c) // 2
-# left = list_c[:mid]
-# right = list_c[mid:]
+# make another list
 
-# print(left)
-# print(right)
+# merge 2 list with same type
 
-# string_c = "".join(list_c)
-# print(string_c)
+# check if 'k' inside list
 
-# list_b = [int(i) for i in str(b)]
-# print(list_b)
+# check index space
 
-# list_b.sort()
-# print(list_b)
-# list_b.sort(reverse=True)
-# print(list_b)
+# remove duplicate
 
+# remove space in list
 
-# from itertools import combinations, combinations_with_replacement, permutations
+# cut list into 2 left and right
 
-# print("============================")
-# for item_a in permutations([1, 2, 3], 2):
-#     print(item_a)
+# make hash map
 
-# print("============================")
-# for item_b in combinations([1, 2, 3], 2):
-#     print(item_b)
+# check if n in keys
 
-# print("============================")
-# for item_c in combinations_with_replacement([1, 2, 3], 2):
-#     print(item_c)
-
-dict_list = {"{": "}", "[": "]", "(": ")"}
-
-print("{" in dict_list.keys())
-print("}" in dict_list.values())
-
-for key, value in dict_list.items():
-    print("key {}: value {}".format(key, value))
+# check if n in values
