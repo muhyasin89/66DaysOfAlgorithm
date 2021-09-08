@@ -4,7 +4,7 @@
 
 // turn int to string and make list
 
-// turn list character into list int
+// turn list int into list
 
 // turn list into string
 
