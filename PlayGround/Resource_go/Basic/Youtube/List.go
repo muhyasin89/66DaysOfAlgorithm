@@ -1,8 +1,6 @@
-// make string "Hello World" and int "11223344"
+// make string "Hello World" and string "11223344"
 
 // turn string into list
-
-// turn int to string and make list
 
 // turn list int into list
 
