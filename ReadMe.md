@@ -75,3 +75,13 @@ achieve the objective as problem
 BigO
 Part 1 - https://www.youtube.com/watch?v=HfIH3czXc-8
 Part 2 - https://www.youtube.com/watch?v=zo7YFqw5hNw
+
+Sorting ==============
+Quick Sort.
+Bubble Sort.
+Merge Sort.
+Insertion Sort.
+Selection Sort.
+Heap Sort.
+Radix Sort.
+Bucket Sort.

@@ -11,6 +11,12 @@ https://www.youtube.com/watch?v=IPWmrjE1_MU
 
 https://www.youtube.com/watch?v=xghJNlMibX4
 
+Permutations and Combinations Tutorial
+https://www.youtube.com/watch?v=XJnIdRXUi7A
+
+Print all the permutation of length L using the elements of an array | Iterative
+https://www.geeksforgeeks.org/print-all-the-permutation-of-length-l-using-the-elements-of-an-array-iterative/
+
 Next Permutation
 https://www.youtube.com/watch?v=6qXO72FkqwM
 
