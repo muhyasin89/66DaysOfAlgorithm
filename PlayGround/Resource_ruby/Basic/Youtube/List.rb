@@ -4,7 +4,6 @@ require 'pp'
 
 # turn string into list
 
-
 # turn list char into list int
 
 # turn list into string
@@ -17,16 +16,13 @@ require 'pp'
 
 # swap list
 
-
 # make another list
-
 
 # merge 2 list with same type
 
 # check if 'k' inside list
 
 # cut list into 2 left and right
-
 
 # make hash map
 
