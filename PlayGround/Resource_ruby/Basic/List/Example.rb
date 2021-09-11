@@ -4,6 +4,8 @@ require 'pp'
 str1 = "Hello World"
 int1 = "1122334455"
 
+puts "Str: #{str1} , Key: #{int1}"
+
 # turn string into list
 # list_str1 = str1.scan /\w/
 list_str1 = str1.split("")
@@ -24,6 +26,9 @@ pp list_str1.join('')
 list_int1 = list_int1.uniq
 pp list_int1
 
+# check if 'k' inside list
+pp list_int1.include? " "
+
 # check index space
 ind_d = list_str1.index(' ')
 pp ind_d
@@ -43,11 +48,10 @@ list_int2 = [6,7,8,9,10]
 list_int1 = (list_int1+list_int2).uniq
 pp list_int1
 
-# check if 'k' inside list
-pp list_int1.include? 10
 
 # cut list into 2 left and right
-left, right = list_str1.each_slice((list_str1.size/2).round).to_a
+mid = (list_str1.size/2)
+left, right = list_str1.each_slice(mid.round).to_a
 pp left
 pp right
 
