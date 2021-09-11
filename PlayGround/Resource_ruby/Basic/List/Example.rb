@@ -4,7 +4,7 @@ require 'pp'
 str1 = "Hello World"
 int1 = "1122334455"
 
-puts "Str: #{str1} , Key: #{int1}"
+puts "Str: #{str1}, Integer: #{int1}"
 
 # turn string into list
 # list_str1 = str1.scan /\w/
