@@ -5,7 +5,8 @@ str1 = "Hello World"
 int1 = "1122334455"
 
 # turn string into list
-list_str1 = str1.scan /\w/
+# list_str1 = str1.scan /\w/
+list_str1 = str1.split("")
 list_int1 = int1.scan /\w/
 
 pp list_str1
@@ -23,8 +24,8 @@ pp list_str1.join('')
 list_int1 = list_int1.uniq
 pp list_int1
 
-# check index d
-ind_d = list_str1.index('d')
+# check index space
+ind_d = list_str1.index(' ')
 pp ind_d
 
 # remove d in list
