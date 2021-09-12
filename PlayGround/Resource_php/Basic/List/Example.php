@@ -1,80 +1,82 @@
 <?php
+// make string "Hello World" and string "11223344"
+$str1 = "Hello World";
+$int1 = "11223344";
 
-$my_array = array(2, 4, 3, 5, 1);
 
-list($a, $b, $c, $d, $f) = $my_array;
+echo "Str: " . $str1 . " Int:" . $int1 . "\n";
+// turn string into list
+// $list_str = explode(" ", $str1);
+$list_str = str_split($str1);
+$list_int = str_split($int1);
 
-echo "$a $b $c $d $e $f\n";
+print_r($list_str);
+print_r($list_int);
 
-function printList($arr)
+// turn list int into list
+$list_int = array_map('intval', $list_int);
+print_r($list_int);
+
+// remove duplicate
+$list_int = array_unique($list_int);
+print_r($list_int);
+
+// check index space
+$ind_space = array_search(" ", $list_str);
+print($ind_space);
+
+// remove space in list
+unset($list_str[$ind_space]);
+print_r($list_str);
+
+// turn list into string
+echo implode(" ", $list_str) . "\n";
+
+// swap list
+function swap($ind1, $ind2, $list_arr)
 {
-    foreach ($arr as $item) {
-        echo $item . " ";
-    }
-    echo "\n";
+    $temp = $list_arr[$ind1];
+    $list_arr[$ind1] = $list_arr[$ind2];
+    $list_arr[$ind2] = $temp;
+
+    return $list_arr;
 }
 
+swap(4, 5, $list_str);
+print_r($list_str);
 
-function swap($start, $end, $arr)
-{
-    $temp = $arr[$start];
-    $arr[$start] = $arr[$end];
-    $arr[$end] = $temp;
 
-    return $arr;
+// make another list
+$arr_int2 = array(6, 7, 8, 9, 10);
+
+// merge 2 list with same type
+$arr_int1 = array_merge($list_int, $arr_int2);
+print_r($arr_int1);
+
+// check if 'k' inside list
+echo in_array(4, $arr_int1) . "\n";
+
+// cut list into 2 left and right
+$len = count($list_str);
+$left = array_slice($list_str, 0, $len / 2);
+$right = array_slice($list_str, $len / 2);
+
+print_r($left);
+print_r($right);
+
+// make hash map
+$fistHashMap = array(1 => 'first', 2 => 'second', 3 => 'third');
+
+// check if n in keys
+echo array_key_exists(1, $fistHashMap) . "\n";
+
+// get value of n
+echo $fistHashMap[1] . "\n";
+
+// check if n in values
+echo in_array('first', $fistHashMap) . "\n";
+
+// itterate hash
+foreach ($fistHashMap as $key => $value) {
+    echo $key . " = " . $value . "\n";
 }
-
-$arr = swap(0, 1, $my_array);
-
-printList($arr);
-echo array_search(1, $my_array) . "\n";
-
-
-$string_a = "IniStringPertama";
-$arr_a = str_split($string_a);
-
-printList($arr_a);
-echo implode("", $arr_a) . "\n";
-
-function printHashMap($hash)
-{
-    foreach ($hash as $item) {
-        echo $item . " - ";
-    }
-}
-
-function printYield($my_array)
-{
-    yield $my_array;
-}
-
-$myhashmap = array(1 => 'first', 2 => 'second', 3 => 'third');
-
-printHashMap($myhashmap);
-print_r(array_keys($myhashmap));
-print_r($my_array);
-printYield($my_array);
-
-echo "============separator================\n";
-print_r(array_key_exists("1", $myhashmap) . "\n");
-
-echo (in_array('first', $myhashmap) . "\n");
-
-$list_str = "Hello World";
-$arr_str = explode(" ", $list_str);
-var_dump($arr_str);
-
-print_r(str_split($arr_str[0]));
-
-
-$palind = str_split("aabcbaa");
-$len = count($palind);
-
-$left = array_slice($palind, 0, floor($len / 2));
-$right = array_slice($palind, floor($len / 2));
-
-if (count($left) != count($right)) {
-    array_shift($right);
-}
-var_dump($left);
-var_dump($right);

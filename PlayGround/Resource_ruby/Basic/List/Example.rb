@@ -1,52 +1,73 @@
 require 'pp'
 
-str1 = "Hello World! this is ruby"
-int1 = 1234
+# make string "Hello World" and string "1122334455"
+str1 = "Hello World"
+int1 = "1122334455"
 
-list_int = int1.to_s.split("")
-list_str = str1.split(" ")
+puts "Str: #{str1}, Integer: #{int1}"
 
-puts str1 +  " end of str"
-puts int1 
+# turn string into list
+# list_str1 = str1.scan /\w/
+list_str1 = str1.split("")
+list_int1 = int1.scan /\w/
 
-# puts list_int.inspect
+pp list_str1
+pp list_int1
 
-# puts list_str.inspect
-list_int.unshift("") 
-pp list_int.reject(&:empty?).map(&:to_i)
-pp list_str
+# turn list char into list int
+pp int1.each_char.map(&:to_i)
+list_int1 = list_int1.map(&:to_i)
+pp list_int1
 
-list_int[0], list_int[1] = list_int[1], list_int[0]
+# turn list into string
+pp list_str1.join('')
 
-pp list_int
+# remove duplicate
+list_int1 = list_int1.uniq
+pp list_int1
 
-pp list_str.sort_by(&:length)
-pp list_str.sort {|a,b| a.length <=> b.length}
-pp list_str.sort_by {|a| -a.length}
+# check if 'k' inside list
+pp list_int1.include? " "
 
-music = ["21.mp3", "10.mp3", "5.mp3", "40.mp3"]
-pp music.sort
-pp music.sort_by { |s| s.scan(/\d+/).first.to_i}
+# check index space
+ind_d = list_str1.index(' ')
+pp ind_d
+
+# remove d in list
+list_str1.delete_at(ind_d)
+pp list_str1
+
+# swap list
+list_str1[4], list_str1[5] = list_str1[5], list_str1[4]
+pp list_str1
+
+# make another list
+list_int2 = [6,7,8,9,10]
+
+# merge 2 list with same type
+list_int1 = (list_int1+list_int2).uniq
+pp list_int1
 
 
-# hash = {1: "first", 2: "second", 3: "third"}
-# hash = {a: 1, b: 2, c: 3}
-hash = {"{": "}", "(": ")", "[": "]"}
-pp hash.sort_by(&:last)
+# cut list into 2 left and right
+mid = (list_str1.size/2)
+left, right = list_str1.each_slice(mid.round).to_a
+pp left
+pp right
 
-pp hash.key?(:"{")
-pp hash.value?("}")
+# make hash map
+firstHashMap = { 1 => "first", 2 => "second", 3 => "three" }
 
-pp hash.member?("}")
+# check if n in keys
+puts firstHashMap.key?(1)
 
+# get value of n
+puts firstHashMap[1]
 
-def quick_sort(list)
-    return [] if list.empty?
-    groups = list.group_by { |n| n <=> list.first }
-    less_than    = groups[-1] || []
-    first        = groups[0]  || []
-    greater_than = groups[1]  || []
-    quick_sort(less_than) + first + quick_sort(greater_than)
-  end
-  
-  p quick_sort [3, 7, 2, 1, 8, 12]
+# check if n in values
+puts firstHashMap.has_value?("first")
+
+# itterate in hash
+firstHashMap.each do |key, value|
+    puts "Key #{key}  Value #{value}"
+end

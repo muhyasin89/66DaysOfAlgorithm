@@ -53,7 +53,7 @@ inp_str2 = "{(][)}"  # expected False
 inp_str3 = "]["  # expected False
 
 
-def validClosure(list_pair):
+def removeCompletePair(list_pair):
     list_result = []
     if len(list_pair) == 1:
         return False
@@ -75,7 +75,7 @@ def validClosure(list_pair):
                 list_result.append(list_pair[i])
 
     if len(list_result):
-        validClosure(list_result)
+        removeCompletePair(list_result)
 
     return True
 
@@ -83,7 +83,7 @@ def validClosure(list_pair):
 def checkClosure(inp):
     list_inp = list(inp)
 
-    return validClosure(list_inp)
+    return removeCompletePair(list_inp)
 
 
 print(checkClosure(inp_str))

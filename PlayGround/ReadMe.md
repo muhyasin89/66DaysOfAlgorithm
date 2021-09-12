@@ -11,6 +11,12 @@ https://www.youtube.com/watch?v=IPWmrjE1_MU
 
 https://www.youtube.com/watch?v=xghJNlMibX4
 
+Permutations and Combinations Tutorial
+https://www.youtube.com/watch?v=XJnIdRXUi7A
+
+Print all the permutation of length L using the elements of an array | Iterative
+https://www.geeksforgeeks.org/print-all-the-permutation-of-length-l-using-the-elements-of-an-array-iterative/
+
 Next Permutation
 https://www.youtube.com/watch?v=6qXO72FkqwM
 
@@ -18,6 +24,9 @@ Combinations
 https://www.youtube.com/watch?v=NA2Oj9xqaZQ
 
 Next Permutation https://www.youtube.com/watch?v=quAS1iydq7U - https://www.youtube.com/watch?v=4wlBBRo4tYY
+
+Recursive LinkedList
+https://www.youtube.com/watch?v=8GtdXAqaQHg
 
 List into LinkedList
 https://stackoverflow.com/questions/31553576/converting-a-list-to-a-linked-list
@@ -72,3 +81,34 @@ https://www.youtube.com/watch?v=-zOgsxgnGHg
 ES6
 https://www.youtube.com/watch?v=WZQc7RUAg18
 https://blog.alexdevero.com/es6-es7-es8-modern-javascript-pt6/
+Intro to Binary Trees and Breadth First Traversal
+https://www.youtube.com/watch?v=dfaKCrJ2HAk
+
+=============
+Type Sorting+
+=============
+Quick Sort
+Bubble Sort
+Merge Sort
+Insertion Sort
+Selection Sort
+Heap Sort
+Radix Sort
+Bucket Sort
+
+==============================================
+
+- Tree traversal
+- Binary search tree
+- Recursive function
+- Iterative algorithm
+- Stacks and queues
+- Object oriented programming
+- Data structures (Hashmaps, graphs, etc.)
+
+===============================================
+
+- Pointers in C or C++
+- Sorting algorithms
+- Strings and how to navigate through them (Some types: palindrome, anagram)
+- Dynamic programming

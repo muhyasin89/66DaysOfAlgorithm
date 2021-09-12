@@ -58,9 +58,9 @@ Dynamic programming - find all possible solution and find the best
 Dyanamic programming using principle of optimality
 principle of optimality is the problem can be solve by taking seek and solve decision
 
----------------------
-Can you colaborate? |
----------------------
+---
+
+## Can you colaborate? |
 
 what is optimazation problem?
 
@@ -71,3 +71,17 @@ solution that statisfy the condition of problem
 
 Optimal solution:
 achieve the objective as problem
+
+BigO
+Part 1 - https://www.youtube.com/watch?v=HfIH3czXc-8
+Part 2 - https://www.youtube.com/watch?v=zo7YFqw5hNw
+
+Sorting ==============
+Quick Sort.
+Bubble Sort.
+Merge Sort.
+Insertion Sort.
+Selection Sort.
+Heap Sort.
+Radix Sort.
+Bucket Sort.
