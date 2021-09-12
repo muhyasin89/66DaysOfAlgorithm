@@ -11,13 +11,11 @@ public class solution {
         for (int i = 0; i < n; i++) {
             result.add(a[i]);
         }
-        // System.out.println(result);
         return result;
     }
 
     // Generating permutation using Heap Algorithm
     List<ArrayList<Integer>> heapPermutation(solution obj, List<ArrayList<Integer>> result, int a[], int size, int n) {
-
         // if size becomes 1 then prints the obtained
         // permutation
         if (size == 1) {
@@ -47,7 +45,6 @@ public class solution {
         return result;
     }
 
-    // Driver code
     public static void main(String args[]) {
         List<ArrayList<Integer>> result = new ArrayList<>();
         solution obj = new solution();
