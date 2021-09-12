@@ -61,8 +61,7 @@ func main() {
 	str1 := "Hello World"
 	int1 := "1122334455"
 
-	fmt.Println("String: ", str1)
-	fmt.Println("Integer : ", int1)
+	fmt.Println("String: ", str1, " Integer : ", int1)
 
 	// turn string into list
 	chars := []rune(str1)
@@ -81,7 +80,7 @@ func main() {
 
 	fmt.Println(intArray)
 
-	// turn list int into list
+	// turn list char into list int
 	var listInt = []int{}
 
 	for _, i := range intArray {
