@@ -10,6 +10,7 @@ def SumList(arr, hash_map):
             hash_map[item] += 1
         else:
             hash_map[item] = 1
+
     return hash_map
 
 

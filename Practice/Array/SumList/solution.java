@@ -13,12 +13,14 @@ public class solution {
         }
 
         return hash_map;
+
     }
 
     void printHashMap(HashMap<Integer, Integer> hash_map) {
         for (Map.Entry<Integer, Integer> set : hash_map.entrySet()) {
             System.out.println("number " + set.getKey() + " = " + set.getValue() + " times");
         }
+
     }
 
     public static void main(String[] args) {

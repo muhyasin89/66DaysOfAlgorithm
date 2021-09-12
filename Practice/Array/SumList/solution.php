@@ -1,29 +1,29 @@
 <?php
 
 $arr = array(1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5);
-$map = array();
+$hash_map = array();
 
+// number 1 = 3 times
 
-function SumList($arr, $map)
+function SumList($hash_map, $arr)
 {
     foreach ($arr as $item) {
-        if (array_key_exists($item, $map)) {
-            $map[$item] += 1;
+        if (array_key_exists($item, $hash_map)) {
+            $hash_map[$item] += 1;
         } else {
-            $map[$item] = 1;
+            $hash_map[$item] = 1;
         }
     }
-
-    return $map;
+    return $hash_map;
 }
 
-function printHashMap($map)
+
+function printHashMap($hash_map)
 {
-    foreach ($map as $key => $val) {
-        echo "number " . $key . " = " . $val . " times \n";
+    foreach ($hash_map as $key => $val) {
+        echo "number " . $key . " = " . $val . " times\n";
     }
 }
 
-
-$map = SumList($arr, $map);
-printHashMap($map);
+$hash_map  = SumList($hash_map, $arr);
+printHashMap($hash_map);

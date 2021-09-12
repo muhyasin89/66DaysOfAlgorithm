@@ -1,16 +1,13 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func checkKeys(ind int, hash_map map[int]int) bool {
-	if _, ok := hash_map[ind]; ok {
-		if ok {
+	if _, key := hash_map[ind]; key {
+		if key {
 			return true
 		}
 	}
-
 	return false
 }
 
@@ -23,12 +20,11 @@ func SumList(hash_map map[int]int, arr []int) map[int]int {
 		}
 	}
 	return hash_map
-
 }
 
 func printHashMap(hash_map map[int]int) {
 	for key, val := range hash_map {
-		fmt.Println("number ", key, "=", val, "times")
+		fmt.Println("number ", key, "=", val, " times")
 	}
 
 }
@@ -36,6 +32,8 @@ func printHashMap(hash_map map[int]int) {
 func main() {
 	arr := []int{1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5}
 	hash_map := map[int]int{}
+
+	// number 1 = 3 times
 
 	hash_map = SumList(hash_map, arr)
 	printHashMap(hash_map)
