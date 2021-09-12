@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 // Java implementation for above approach
 
 class solution {
-
     List<ArrayList<Integer>> chopped(List<Integer> list, int L) {
         List<ArrayList<Integer>> parts = new ArrayList<ArrayList<Integer>>();
         final int N = list.size();
