@@ -1,14 +1,14 @@
-package Basic.List;
+package Practice.Array.PermutationWithLength;
 
 import java.io.*;
 
 // Java implementation for above approach
 
-class PermutationWithLength {
+class solution {
 
     // Convert the number to Lth
     // base and print the sequence
-    static void convert_To_Len_th_base(int n, int arr[], int len, int L) {
+    static void convertToLenTHBase(int n, int arr[], int len, int L) {
         // Sequence is of length L
         for (int i = 0; i < L; i++) {
             // Print the ith element
@@ -25,7 +25,7 @@ class PermutationWithLength {
         // permutations
         for (int i = 0; i < (int) Math.pow(len, L); i++) {
             // Convert i to len th base
-            convert_To_Len_th_base(i, arr, len, L);
+            convertToLenTHBase(i, arr, len, L);
         }
     }
 
