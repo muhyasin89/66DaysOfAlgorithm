@@ -20,7 +20,7 @@ function sumList($arr, $map)
 function printHashMap($map)
 {
     foreach ($map as $key => $val) {
-        echo "number: " . $key . " = " . $val . "times\n";
+        echo "number: " . $key . " = " . $val . " times\n";
     }
 }
 

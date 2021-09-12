@@ -28,13 +28,17 @@ func sumList(arr []int, hash_map map[int]int) map[int]int {
 	return hash_map
 }
 
+func printHashMap(hash_map map[int]int) {
+	// Display count of apples and oranges.
+	for key, val := range hash_map {
+		fmt.Println("number:", key, "=", val, " times")
+	}
+}
+
 func main() {
 	arr := []int{1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5}
 	hash_map := map[int]int{}
 
 	hash_map = sumList(arr, hash_map)
-	for key, val := range hash_map {
-		fmt.Println("number:", key, "=", val, " times")
-	}
-
+	printHashMap(hash_map)
 }

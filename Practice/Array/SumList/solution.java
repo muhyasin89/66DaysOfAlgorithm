@@ -18,6 +18,12 @@ public class solution {
         return map;
     }
 
+    void printHashMap(HashMap<Integer, Integer> map) {
+        for (Map.Entry<Integer, Integer> set : map.entrySet()) {
+            System.out.println("number: " + set.getKey() + " = " + set.getValue() + " times");
+        }
+    }
+
     public static void main(String args[]) {
         int[] arr = { 1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5 };
 
@@ -25,10 +31,7 @@ public class solution {
         solution obj = new solution();
 
         map = obj.sumList(map, arr);
-
-        for (Map.Entry<Integer, Integer> set : map.entrySet()) {
-            System.out.println("number: " + set.getKey() + " = " + set.getValue() + " times");
-        }
+        obj.printHashMap(map);
 
     }
 }
