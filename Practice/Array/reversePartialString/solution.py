@@ -1,22 +1,7 @@
-a = [
-    "I",
-    " ",
-    "d",
-    "r",
-    "i",
-    "v",
-    "e",
-    " ",
-    "w",
-    "i",
-    "t",
-    "h",
-    " ",
-    "B",
-    "o",
-    "l",
-    "t",
-]
+a = "I drive with Bolt"
+# expected "I drive with Bolt"
+b = "Saya adalah Programmer"
+# expected "ayaS halada remmargorP"
 
 
 def change_input(in_text):
@@ -26,7 +11,8 @@ def change_input(in_text):
         list_str[i] = list_str[i][::-1]
     list_str = list(" ".join(list_str))
 
-    return list_str
+    return "".join(list_str)
 
 
-print(change_input(a))
+print(change_input(list(a)))
+print(change_input(list(b)))
