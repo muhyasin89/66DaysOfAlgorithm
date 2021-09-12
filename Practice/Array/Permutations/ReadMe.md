@@ -1,4 +1,4 @@
-Algorithm:
+Algorithm Java:
 
 1.  The algorithm generates (n-1)! permutations of the first n-1 elements, adjoining the last element to each of these. This will generate all of the permutations that end with the last element.
 

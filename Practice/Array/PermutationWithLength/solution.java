@@ -1,6 +1,5 @@
 package Practice.Array.PermutationWithLength;
 
-import java.io.*;
 import java.util.*;;
 
 // Java implementation for above approach

@@ -1,12 +1,12 @@
-package Practice.Array.PermutationWithHeap;
+package Practice.Array.Permutations;
 
 import java.util.*;
 
 // Java program to print all permutations using
 // Heap's algorithm
-public class solution {
+public class solutionWithHeap {
     // Prints the array
-    ArrayList<Integer> printArr(solution obj, int a[], int n) {
+    ArrayList<Integer> printArr(solutionWithHeap obj, int a[], int n) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         for (int i = 0; i < n; i++) {
             result.add(a[i]);
@@ -15,7 +15,8 @@ public class solution {
     }
 
     // Generating permutation using Heap Algorithm
-    List<ArrayList<Integer>> heapPermutation(solution obj, List<ArrayList<Integer>> result, int a[], int size, int n) {
+    List<ArrayList<Integer>> heapPermutation(solutionWithHeap obj, List<ArrayList<Integer>> result, int a[], int size,
+            int n) {
         // if size becomes 1 then prints the obtained
         // permutation
         if (size == 1) {
@@ -47,7 +48,7 @@ public class solution {
 
     public static void main(String args[]) {
         List<ArrayList<Integer>> result = new ArrayList<>();
-        solution obj = new solution();
+        solutionWithHeap obj = new solutionWithHeap();
         int a[] = { 1, 2, 3 };
         result = obj.heapPermutation(obj, result, a, a.length, a.length);
 
