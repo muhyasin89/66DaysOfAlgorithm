@@ -45,7 +45,7 @@ def checkCombination(arr):
 
 
 # practice 2
-dict_arr = {"{": "}", "(": ")", "[": "]"}
+dict_list = {"{": "}", "[": "]", "(": ")", "<": ">"}
 
 inp_str = "[]"  # expected True
 inp_str1 = "{([{}()[]])}"  # expected True

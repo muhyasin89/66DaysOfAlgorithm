@@ -1,10 +1,10 @@
-package Basic.List;
+package Practice.Array.CombinationWithLength;
 
 import java.io.*;
 
 // Java program to print all combination of size r in an array of size n
 
-class CombinationWithLength {
+class solution {
 
     /*
      * arr[] ---> Input Array data[] ---> Temporary array to store current

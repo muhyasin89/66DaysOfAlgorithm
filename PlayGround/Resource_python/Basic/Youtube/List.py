@@ -41,7 +41,7 @@ print(left)
 print(right)
 
 # make hash map
-dict_list = {"{": "}", "[": "]", "(": ")"}
+dict_list = {"{": "}", "[": "]", "(": ")", "<": ">"}
 
 
 print("{" in dict_list.keys())
