@@ -56,6 +56,16 @@ func containsValue(m map[int]string, v string) bool {
 	return false
 }
 
+func containsKeys(m map[int]string, item int) bool {
+	if _, ok := m[item]; ok {
+		if ok {
+			return true
+		}
+	}
+
+	return false
+}
+
 func main() {
 	// make string "Hello World" and string "11223344"
 	str1 := "Hello World"
@@ -142,13 +152,11 @@ func main() {
 	fmt.Println("map:", m)
 
 	// check if n in keys
-	if _, ok := m[1]; ok {
-		if ok {
-			fmt.Println("Key Found")
-		} else {
-			fmt.Println("Key Not Found")
-		}
-	}
+	fmt.Println(containsKeys(m, 1))
+
+	//print hashmap
+	fmt.Println(m[1])
+	// check if x in val
 
 	fmt.Println(containsValue(m, "first"))
 
