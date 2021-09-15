@@ -25,6 +25,10 @@ class solution {
         if (index == r) {
             for (int j = 0; j < r; j++) {
                 result.add(data[j]);
+                System.out.println(j);
+                System.out.println(result.toString());
+                // System.out.println(Arrays.toString(arr));
+
             }
             // System.out.println(result);
             return result;
@@ -37,6 +41,7 @@ class solution {
         for (int i = start; i <= end && end - i + 1 >= r - index; i++) {
             data[index] = arr[i];
             result.addAll(obj.combinationUtil(obj, arr, data, i + 1, end, index + 1, r));
+
         }
 
         return result;
@@ -64,7 +69,7 @@ class solution {
         solution obj = new solution();
 
         result = obj.getCombination(obj, result, arr, n, r);
-        System.out.println(result);
+        // System.out.println(result);
     }
 }
 
