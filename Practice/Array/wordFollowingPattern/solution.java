@@ -15,8 +15,7 @@ public class solution {
 
         for (int i = 0; i < strAsByteArray.length; i++) {
             if (map_words.containsKey((char) strAsByteArray[i])) {
-                if ((String) map_words.get((char) strAsByteArray[i]).trim() != (String) spl[i].trim()) {
-                    System.out.println(map_words.get((char) strAsByteArray[i]) == spl[i]);
+                if (!map_words.get((char) strAsByteArray[i]).equals(spl[i])) {
                     return false;
                 }
             } else {
