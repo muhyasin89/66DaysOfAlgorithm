@@ -21,7 +21,7 @@ class solution {
     }
 
     // Print all the permuataions
-    List<ArrayList<Integer>> getAllCombinations(solution obj, List<ArrayList<Integer>> result, int arr[], int len,
+    List<ArrayList<Integer>> getAllPermutations(solution obj, List<ArrayList<Integer>> result, int arr[], int len,
             int L) {
         // There can be (len)^l
         // permutations
@@ -42,7 +42,7 @@ class solution {
         solution obj = new solution();
 
         // function call
-        result = obj.getAllCombinations(obj, result, arr, len, L);
+        result = obj.getAllPermutations(obj, result, arr, len, L);
 
         System.out.println(result);
     }
