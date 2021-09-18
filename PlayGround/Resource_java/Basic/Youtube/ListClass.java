@@ -1,43 +1,33 @@
-import java.lang.ref.Cleaner;
-import java.lang.reflect.Array;
+
 import java.util.*;
 
-import javax.lang.model.element.Element;
-
 public class ListClass {
-
-    ArrayList<Integer> RemoveDuplicate(ArrayList<Integer> list) {
+    ArrayList<Integer> RemoveDuplicate(ArrayList<Integer> list_int) {
         ArrayList<Integer> newList = new ArrayList<>();
 
-        // Traverse through the first list
-        for (Integer item : list) {
-
-            // If this element is not present in newList
-            // then add it
+        for (Integer item : list_int) {
             if (!newList.contains(item)) {
-
                 newList.add(item);
             }
         }
 
-        // return the new list
         return newList;
     }
 
     public static void main(String args[]) {
-
-        // make string "Hello World" and string "11223344"
+        // make string "Hello World" and string "1122334455"
         String str1 = "Hello World";
-        String int1 = "11223344";
-        // String[] str1 = { "Hello World" };
-        // String[][] str2 = { { "Hello" }, { "Word" } };
-        System.out.println("String:" + str1 + "Int:" + int1);
-        // System.out.println(Arrays.toString(str1));
-        // System.out.println(Arrays.deepToString(str2));
+        String int1 = "1122334455";
+        // String[] str2 = { "Hello World" };
+        // String[][] str3 = { { "Hello" }, { "World" } };
+
+        System.out.println("Str:" + str1 + " Int:" + int1);
+        // System.out.println(Arrays.toString(str2));
+        // System.out.println(Arrays.deepToString(str3));
 
         // turn string into list
-        ArrayList<Character> list_str = new ArrayList<Character>();
-        ArrayList<Integer> list_int = new ArrayList<Integer>();
+        ArrayList<Character> list_str = new ArrayList<>();
+        ArrayList<Integer> list_int = new ArrayList<>();
 
         for (int i = 0; i < str1.length(); i++) {
             list_str.add(str1.charAt(i));
@@ -48,13 +38,12 @@ public class ListClass {
         for (int i = 0; i < int1.length(); i++) {
             list_int.add(Character.getNumericValue(int1.charAt(i)));
         }
-
         System.out.println(list_int);
 
         // turn list into string
         StringBuilder strbul = new StringBuilder();
-        for (Character str : list_str) {
-            strbul.append(str);
+        for (Character c : list_str) {
+            strbul.append(c);
         }
         System.out.println(strbul.toString());
 
@@ -75,9 +64,8 @@ public class ListClass {
         list_int = obj.RemoveDuplicate(list_int);
         System.out.println(list_int);
 
-        // check if 'k' inside list
+        // check if 'space' inside list
         System.out.println(list_str.contains(' '));
-
         // check index space
         int ind_arr = list_str.indexOf(' ');
         System.out.println(ind_arr);
@@ -85,36 +73,35 @@ public class ListClass {
         // remove space in list
         list_str.remove(ind_arr);
         System.out.println(list_str);
-        // swap list
+
+        // swap
         Collections.swap(list_str, 4, 5);
         System.out.println(list_str);
 
         // cut list into 2 left and right
-        Integer size_a = list_str.size();
-
-        ArrayList<Character> left = new ArrayList<Character>(list_str.subList(0, (size_a + 1) / 2));
-        ArrayList<Character> right = new ArrayList<Character>(list_str.subList((size_a + 1) / 2, size_a - 1));
-
+        int mid = list_str.size() / 2;
+        ArrayList<Character> left = new ArrayList<>(list_str.subList(0, mid));
+        ArrayList<Character> right = new ArrayList<>(list_str.subList(mid, list_str.size() - 1));
         System.out.println(left);
         System.out.println(right);
 
         // make hash map
-        HashMap<Integer, String> map = new HashMap<Integer, String>();
-        map.put(1, "first");
-        map.put(2, "second");
-        map.put(3, "third");
+        HashMap<Integer, String> hash_map = new HashMap<>();
+        hash_map.put(1, "first");
+        hash_map.put(2, "second");
+        hash_map.put(3, "third");
 
         // check if n in keys
-        System.out.println(map.containsKey(3));
+        System.out.println(hash_map.containsKey(1));
 
         // print map get key
-        System.out.println(map.get(2));
+        System.out.println(hash_map.get(1));
 
         // check if n in values
-        System.out.println(map.containsValue("second"));
+        System.out.println(hash_map.containsValue("second"));
 
         // itterate hash map
-        for (Map.Entry<Integer, String> set : map.entrySet()) {
+        for (Map.Entry<Integer, String> set : hash_map.entrySet()) {
             System.out.println(set.getKey() + " = " + set.getValue());
         }
 
