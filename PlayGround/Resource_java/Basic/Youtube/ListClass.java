@@ -6,73 +6,94 @@ import javax.lang.model.element.Element;
 
 public class ListClass {
 
-    public static void main(String args[]) {
+    ArrayList<Integer> RemoveDuplicate(ArrayList<Integer> list) {
+        ArrayList<Integer> newList = new ArrayList<>();
 
-        // make string "Hello World" and string "11223344"
+        // Traverse through the first list
+        for (Integer item : list) {
 
-        String str_a = "Hello World";
-        // String[] str_a1 = { "Hello World" };
-        // String[][] str_a11 = { { "Hello" }, { "Word" } };
-        Integer int_a = 1122345;
-        String str_int_a = String.valueOf(int_a);
+            // If this element is not present in newList
+            // then add it
+            if (!newList.contains(item)) {
 
-        System.out.println(str_a);
-        System.out.println(int_a);
-        // System.out.println(Arrays.toString(str_a1));
-        // System.out.println(Arrays.deepToString(str_a11));
-
-        // turn string into list
-
-        ArrayList<Character> list_str_a = new ArrayList<Character>();
-        ArrayList<Integer> list_int_a = new ArrayList<Integer>();
-
-        for (int i = 0; i < str_a.length(); i++) {
-            list_str_a.add(str_a.charAt(i));
-        }
-        list_str_a.remove(5);
-        System.out.println(list_str_a);
-
-        // turn list int into list
-        for (int i = 0; i < str_int_a.length(); i++) {
-            list_int_a.add(Character.getNumericValue(str_int_a.charAt(i)));
-        }
-
-        System.out.println(list_int_a);
-
-        // turn list into string
-
-        // swap list
-        Collections.swap(list_str_a, 4, 5);
-        System.out.println(list_str_a);
-
-        // make another list
-
-        // merge 2 list with same type
-
-        // check if 'k' inside list
-        System.out.println(right.contains('l'));
-
-        // check index space
-
-        // remove space in list
-
-        // remove duplicate
-
-        ArrayList<Integer> listWithoutDuplicates = new ArrayList<Integer>();
-
-        for (Integer a : list_int_a) {
-            if (!listWithoutDuplicates.contains(a)) {
-                listWithoutDuplicates.add(a);
+                newList.add(item);
             }
         }
 
-        System.out.println(listWithoutDuplicates);
+        // return the new list
+        return newList;
+    }
+
+    public static void main(String args[]) {
+
+        // make string "Hello World" and string "11223344"
+        String str1 = "Hello World";
+        String int1 = "11223344";
+        // String[] str1 = { "Hello World" };
+        // String[][] str2 = { { "Hello" }, { "Word" } };
+        System.out.println("String:" + str1 + "Int:" + int1);
+        // System.out.println(Arrays.toString(str1));
+        // System.out.println(Arrays.deepToString(str2));
+
+        // turn string into list
+        ArrayList<Character> list_str = new ArrayList<Character>();
+        ArrayList<Integer> list_int = new ArrayList<Integer>();
+
+        for (int i = 0; i < str1.length(); i++) {
+            list_str.add(str1.charAt(i));
+        }
+        System.out.println(list_str);
+
+        // turn list str into list int
+        for (int i = 0; i < int1.length(); i++) {
+            list_int.add(Character.getNumericValue(int1.charAt(i)));
+        }
+
+        System.out.println(list_int);
+
+        // turn list into string
+        StringBuilder strbul = new StringBuilder();
+        for (Character str : list_str) {
+            strbul.append(str);
+        }
+        System.out.println(strbul.toString());
+
+        // make another list
+        ArrayList<Integer> list_int1 = new ArrayList<>();
+        list_int1.add(6);
+        list_int1.add(7);
+        list_int1.add(8);
+        list_int1.add(9);
+        list_int1.add(10);
+
+        // merge 2 list with same type
+        list_int.addAll(list_int1);
+        System.out.println(list_int);
+
+        // remove duplicate
+        ListClass obj = new ListClass();
+        list_int = obj.RemoveDuplicate(list_int);
+        System.out.println(list_int);
+
+        // check if 'k' inside list
+        System.out.println(list_str.contains(' '));
+
+        // check index space
+        int ind_arr = list_str.indexOf(' ');
+        System.out.println(ind_arr);
+
+        // remove space in list
+        list_str.remove(ind_arr);
+        System.out.println(list_str);
+        // swap list
+        Collections.swap(list_str, 4, 5);
+        System.out.println(list_str);
 
         // cut list into 2 left and right
-        Integer size_a = list_str_a.size();
+        Integer size_a = list_str.size();
 
-        ArrayList<Character> left = new ArrayList<Character>(list_str_a.subList(0, (size_a + 1) / 2));
-        ArrayList<Character> right = new ArrayList<Character>(list_str_a.subList((size_a + 1) / 2, size_a - 1));
+        ArrayList<Character> left = new ArrayList<Character>(list_str.subList(0, (size_a + 1) / 2));
+        ArrayList<Character> right = new ArrayList<Character>(list_str.subList((size_a + 1) / 2, size_a - 1));
 
         System.out.println(left);
         System.out.println(right);
@@ -87,6 +108,11 @@ public class ListClass {
         System.out.println(map.containsKey(3));
         // check if n in values
         System.out.println(map.containsValue("word"));
+
+        // itterate hash map
+        for (Map.Entry<Integer, String> set : map.entrySet()) {
+            System.out.println(set.getKey() + " = " + set.getValue());
+        }
 
     }
 }
