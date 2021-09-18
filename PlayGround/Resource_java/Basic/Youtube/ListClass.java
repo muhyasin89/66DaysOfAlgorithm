@@ -100,14 +100,18 @@ public class ListClass {
 
         // make hash map
         HashMap<Integer, String> map = new HashMap<Integer, String>();
-        map.put(1, "Hello");
-        map.put(2, "word");
-        map.put(3, "everyone");
+        map.put(1, "first");
+        map.put(2, "second");
+        map.put(3, "third");
 
         // check if n in keys
         System.out.println(map.containsKey(3));
+
+        // print map get key
+        System.out.println(map.get(2));
+
         // check if n in values
-        System.out.println(map.containsValue("word"));
+        System.out.println(map.containsValue("second"));
 
         // itterate hash map
         for (Map.Entry<Integer, String> set : map.entrySet()) {
