@@ -10,6 +10,10 @@ def ValidBracket(str, dict_map)
     list_str = str.split("")
     list_bracket =[]
 
+    if list_str.length() == 1
+        return false
+    end
+
     for i in 0..list_str.length()
         if dict_map.has_value?(list_str[i]) && i <1
             return false
@@ -22,6 +26,10 @@ def ValidBracket(str, dict_map)
                 list_bracket.pop
             end
         end
+    end
+
+    if list_bracket.length() > 0
+        return false
     end
 
     return true

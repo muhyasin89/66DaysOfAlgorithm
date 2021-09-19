@@ -32,6 +32,10 @@ const ValidateBracket = (str, dict_map) =>{
             }
         }
     }
+    
+    if(list_bracket.length > 0){
+        return false;
+    }
 
     return true;
 }

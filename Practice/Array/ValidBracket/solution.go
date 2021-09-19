@@ -47,6 +47,10 @@ func ValidBracket(str string, dict_map map[string]string) bool {
 			}
 		}
 	}
+
+	if len(list_bracket) > 0 {
+		return false
+	}
 	return true
 }
 

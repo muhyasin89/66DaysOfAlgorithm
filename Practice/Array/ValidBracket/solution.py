@@ -11,6 +11,9 @@ def ValidBracket(str1, dict_map):
     list_str = list(str1)
     list_bracket = []
 
+    if len(list_str) == 1:
+        return False
+
     for i in range(len(list_str)):
         if list_str[i] in dict_map.values() and i < 1:
             return False
@@ -21,6 +24,9 @@ def ValidBracket(str1, dict_map):
                 return False
             else:
                 list_bracket.pop(-1)
+
+    if len(list_bracket) > 0:
+        return False
     return True
 
 

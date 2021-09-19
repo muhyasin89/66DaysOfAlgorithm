@@ -28,6 +28,10 @@ public class solution {
             }
         }
 
+        if (list_bracket.size() > 0) {
+            return false;
+        }
+
         return true;
     }
 

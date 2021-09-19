@@ -30,6 +30,10 @@ function ValidBracket($str, $dict_map)
         }
     }
 
+    if (count($list_bracket) > 1) {
+        return false;
+    }
+
     return true;
 }
 
