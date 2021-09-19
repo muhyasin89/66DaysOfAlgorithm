@@ -35,7 +35,7 @@ class solution {
 
     // Driver code
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 3 };
+        int arr[] = { 1, 2, 3, 4, 5 };
         int len = arr.length;
         int L = 2;
         List<ArrayList<Integer>> result = new ArrayList<>();
