@@ -20,10 +20,12 @@ function ValidBracket($str, $dict_map)
         } elseif (array_key_exists($temp, $dict_map)) {
             array_push($list_bracket, $temp);
         } elseif (in_array($temp, $dict_map)) {
-            if ($dict_map[end($list_bracket)] != $temp) {
-                return false;
-            } else {
-                array_pop($list_bracket);
+            if (count($list_bracket) > 0) {
+                if ($dict_map[end($list_bracket)] != $temp) {
+                    return false;
+                } else {
+                    array_pop($list_bracket);
+                }
             }
         }
     }
