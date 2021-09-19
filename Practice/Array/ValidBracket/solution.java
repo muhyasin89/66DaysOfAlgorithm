@@ -8,10 +8,6 @@ public class solution {
         ArrayList<String> list_bracket = new ArrayList<>();
         String temp = new String();
 
-        if (str.length() == 1) {
-            return false;
-        }
-
         for (int i = 0; i < str.length(); i++) {
             temp = Character.toString(str.charAt(i));
 
@@ -31,7 +27,6 @@ public class solution {
         if (list_bracket.size() > 0) {
             return false;
         }
-
         return true;
     }
 
@@ -43,7 +38,6 @@ public class solution {
         result.put("<", ">");
 
         return result;
-
     }
 
     public static void main(String[] args) {
@@ -52,6 +46,7 @@ public class solution {
         String inp_str2 = "{(][)}";// expected False
         String inp_str3 = "][";// expected False
         String inp_str4 = "{<[adadas]@1234>#$%^}";// expected True
+        String inp_str5 = "{{{{{";// expected False
 
         solution obj = new solution();
         Map<String, String> dict_map = new HashMap<>();
@@ -62,6 +57,7 @@ public class solution {
         System.out.println(obj.ValidBracket(inp_str2, dict_map));
         System.out.println(obj.ValidBracket(inp_str3, dict_map));
         System.out.println(obj.ValidBracket(inp_str4, dict_map));
+        System.out.println(obj.ValidBracket(inp_str5, dict_map));
 
     }
 }

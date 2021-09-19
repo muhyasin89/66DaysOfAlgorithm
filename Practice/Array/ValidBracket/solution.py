@@ -5,14 +5,12 @@ inp_str1 = "{([{}()[]])}"  # expected True
 inp_str2 = "{(][)}"  # expected False
 inp_str3 = "]["  # expected False
 inp_str4 = "{<[adadas]@1234>#$%^}"  # expected True
+inp_str5 = "{\{\{\{"  # expected False
 
 
 def ValidBracket(str1, dict_map):
     list_str = list(str1)
     list_bracket = []
-
-    if len(list_str) == 1:
-        return False
 
     for i in range(len(list_str)):
         if list_str[i] in dict_map.values() and i < 1:
@@ -35,3 +33,4 @@ print(ValidBracket(inp_str1, dict_map))
 print(ValidBracket(inp_str2, dict_map))
 print(ValidBracket(inp_str3, dict_map))
 print(ValidBracket(inp_str4, dict_map))
+print(ValidBracket(inp_str5, dict_map))
