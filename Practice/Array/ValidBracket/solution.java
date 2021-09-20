@@ -3,8 +3,7 @@ package Practice.Array.ValidBracket;
 import java.util.*;
 
 public class solution {
-
-    Boolean ValidBracket(String str, Map hash_map) {
+    Boolean ValidateBracket(String str, Map hash_map) {
         ArrayList<String> list_bracket = new ArrayList<>();
         String temp = new String();
 
@@ -52,12 +51,11 @@ public class solution {
         Map<String, String> dict_map = new HashMap<>();
         dict_map = obj.setHashMap();
 
-        System.out.println(obj.ValidBracket(inp_str, dict_map));
-        System.out.println(obj.ValidBracket(inp_str1, dict_map));
-        System.out.println(obj.ValidBracket(inp_str2, dict_map));
-        System.out.println(obj.ValidBracket(inp_str3, dict_map));
-        System.out.println(obj.ValidBracket(inp_str4, dict_map));
-        System.out.println(obj.ValidBracket(inp_str5, dict_map));
-
+        System.out.println(obj.ValidateBracket(inp_str, dict_map));
+        System.out.println(obj.ValidateBracket(inp_str1, dict_map));
+        System.out.println(obj.ValidateBracket(inp_str2, dict_map));
+        System.out.println(obj.ValidateBracket(inp_str3, dict_map));
+        System.out.println(obj.ValidateBracket(inp_str4, dict_map));
+        System.out.println(obj.ValidateBracket(inp_str5, dict_map));
     }
 }

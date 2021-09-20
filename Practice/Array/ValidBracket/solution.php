@@ -8,10 +8,11 @@ $inp_str3 = "][";  # expected False
 $inp_str4 = "{<[adadas]@1234>#$%^}";  # expected True
 $inp_str5 = "{{{{{"; # expected False
 
-function ValidBracket($str, $dict_map)
+
+function ValidBracket($str1, $dict_map)
 {
     $list_bracket = array();
-    $list_str = str_split($str);
+    $list_str = str_split($str1);
 
     for ($i = 0; $i < count($list_str); $i++) {
         $temp = $list_str[$i];
@@ -33,6 +34,7 @@ function ValidBracket($str, $dict_map)
     if (count($list_bracket) > 0) {
         return false;
     }
+
     return true;
 }
 

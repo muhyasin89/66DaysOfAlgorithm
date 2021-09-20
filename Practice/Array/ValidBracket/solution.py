@@ -9,22 +9,24 @@ inp_str5 = "{\{\{\{"  # expected False
 
 
 def ValidBracket(str1, dict_map):
-    list_str = list(str1)
     list_bracket = []
+    list_str = list(str1)
 
     for i in range(len(list_str)):
-        if list_str[i] in dict_map.values() and i < 1:
+        temp = list_str[i]
+        if temp in dict_map.values() and i < 1:
             return False
-        elif list_str[i] in dict_map.keys():
-            list_bracket.append(list_str[i])
-        elif list_str[i] in dict_map.values():
-            if dict_map[list_bracket[-1]] != list_str[i]:
+        elif temp in dict_map.keys():
+            list_bracket.append(temp)
+        elif temp in dict_map.values():
+            if dict_map[list_bracket[-1]] != temp:
                 return False
             else:
                 list_bracket.pop(-1)
 
     if len(list_bracket) > 0:
         return False
+
     return True
 
 
