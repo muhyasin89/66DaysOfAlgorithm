@@ -12,14 +12,10 @@ const convertToLenTHBase = (result,n, arr, size, L) =>{
     return result
 }
 
-const getAllPermutations = (arr, size, L) =>{
-    result = []
-    new_result = []
-    for(let i=0; i< Math.pow(size, L); i++){
-        convertToLenTHBase(result,i, arr, size, L)
-    }
+const chopped = (result, L) => {
 
-    var i,j, temporary, L;
+    new_result = []
+    var i,j, temporary;
     for (i = 0,j = result.length; i < j; i += L) {
         temporary = result.slice(i, i + L);
         // do whatever
@@ -27,6 +23,18 @@ const getAllPermutations = (arr, size, L) =>{
     }
 
     return new_result
+
+}
+
+const getAllPermutations = (arr, size, L) =>{
+    result = []
+    
+    for(let i=0; i< Math.pow(size, L); i++){
+        convertToLenTHBase(result,i, arr, size, L)
+    }
+
+    return chopped(result, L);
+    
 }
 
 console.log(getAllPermutations(arr, size, L));
