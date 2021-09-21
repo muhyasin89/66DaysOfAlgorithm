@@ -19,14 +19,14 @@ def ValidBracket(str1, dict_map):
         elif temp in dict_map.keys():
             list_bracket.append(temp)
         elif temp in dict_map.values():
-            if dict_map[list_bracket[-1]] != temp:
-                return False
-            else:
-                list_bracket.pop(-1)
+            if len(list_bracket) > 0:
+                if dict_map[list_bracket[-1]] != temp:
+                    return False
+                else:
+                    list_bracket.pop(-1)
 
     if len(list_bracket) > 0:
         return False
-
     return True
 
 

@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func ContainsValue(str1 string, dict_map map[string]string) bool {
 	for _, val := range dict_map {
@@ -27,7 +25,7 @@ func ValidBracket(str1 string, dict_map map[string]string) bool {
 	chars := []rune(str1)
 	list_str := []string{}
 
-	for i := 0; i < len(str1); i++ {
+	for i := 0; i < len(chars); i++ {
 		list_str = append(list_str, string(chars[i]))
 	}
 
@@ -44,13 +42,13 @@ func ValidBracket(str1 string, dict_map map[string]string) bool {
 					list_bracket = list_bracket[:len(list_bracket)-1]
 				}
 			}
-
 		}
 	}
 
 	if len(list_bracket) > 0 {
 		return false
 	}
+
 	return true
 }
 

@@ -3,19 +3,20 @@ package Practice.Array.ValidBracket;
 import java.util.*;
 
 public class solution {
-    Boolean ValidateBracket(String str, Map hash_map) {
+
+    Boolean ValidateBracket(String str, Map dict_map) {
         ArrayList<String> list_bracket = new ArrayList<>();
         String temp = new String();
 
         for (int i = 0; i < str.length(); i++) {
             temp = Character.toString(str.charAt(i));
 
-            if (hash_map.containsValue(temp) && i < 1) {
+            if (dict_map.containsValue(temp) && i < 1) {
                 return false;
-            } else if (hash_map.containsKey(temp)) {
+            } else if (dict_map.containsKey(temp)) {
                 list_bracket.add(temp);
-            } else if (hash_map.containsValue(temp)) {
-                if (!hash_map.get(list_bracket.get(list_bracket.size() - 1)).equals(temp)) {
+            } else if (dict_map.containsValue(temp)) {
+                if (!dict_map.get(list_bracket.get(list_bracket.size() - 1)).equals(temp)) {
                     return false;
                 } else {
                     list_bracket.remove(list_bracket.size() - 1);
@@ -26,6 +27,7 @@ public class solution {
         if (list_bracket.size() > 0) {
             return false;
         }
+
         return true;
     }
 
@@ -57,5 +59,6 @@ public class solution {
         System.out.println(obj.ValidateBracket(inp_str3, dict_map));
         System.out.println(obj.ValidateBracket(inp_str4, dict_map));
         System.out.println(obj.ValidateBracket(inp_str5, dict_map));
+
     }
 }

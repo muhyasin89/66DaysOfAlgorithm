@@ -16,6 +16,7 @@ function ValidBracket($str1, $dict_map)
 
     for ($i = 0; $i < count($list_str); $i++) {
         $temp = $list_str[$i];
+
         if (in_array($temp, $dict_map) && $i < 0) {
             return false;
         } elseif (array_key_exists($temp, $dict_map)) {
@@ -37,6 +38,7 @@ function ValidBracket($str1, $dict_map)
 
     return true;
 }
+
 
 echo ValidBracket($inp_str, $dict_map) ? "true\n" : "false\n";
 echo ValidBracket($inp_str1, $dict_map) ? "true\n" : "false\n";
