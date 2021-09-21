@@ -5,27 +5,26 @@ import java.util.Map;
 
 public class solution {
 
-    Boolean checkPattern(String s, String str) {
+    Boolean checkFollowingPattern(String str1, String string1) {
         Map<Character, String> hash_map = new HashMap<>();
 
-        String[] spl = new String[] {};
-        spl = str.split(" ");
+        String[] list_string = new String[] {};
+        list_string = string1.split(" ");
 
-        if (s.length() != spl.length) {
+        if (str1.length() != list_string.length) {
             return false;
         }
 
-        byte[] strAsByteArray = s.getBytes();
+        byte[] strAsByteArray = str1.getBytes();
 
         for (int i = 0; i < strAsByteArray.length; i++) {
-
-            char c = (char) strAsByteArray[i];
-            if (hash_map.containsKey(c)) {
-                if (!hash_map.get(c).equals(spl[i])) {
+            char temp = (char) strAsByteArray[i];
+            if (hash_map.containsKey(temp)) {
+                if (!hash_map.get(temp).equals(list_string[i])) {
                     return false;
                 }
             } else {
-                hash_map.put(c, spl[i]);
+                hash_map.put(temp, list_string[i]);
             }
         }
 
@@ -43,8 +42,7 @@ public class solution {
 
         solution obj = new solution();
 
-        System.out.println(obj.checkPattern(str1, string1));
-        System.out.println(obj.checkPattern(str2, string2));
-
+        System.out.println(obj.checkFollowingPattern(str1, string1));
+        System.out.println(obj.checkFollowingPattern(str2, string2));
     }
 }

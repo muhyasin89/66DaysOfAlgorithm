@@ -1,35 +1,36 @@
 <?php
-$string1 = "abba";
-$str1 = "dog cat cat dog";
+$str1 = "abba";
+$string1 = "dog cat cat dog";
 # result True
 
-$string2 = "abba";
-$str2 = "dog cat cat fish";
+$str2 = "abba";
+$string2 = "dog cat cat fish";
 # return False
 
-
-function areFollowingPattern($s, $str)
+function checkFollowingPattern($str1, $string1)
 {
-    $list_s = str_split($s);
-    $list_str = explode(" ", $str);
-    $map = array();
+    $list_str = str_split($str1);
+    $list_string = explode(" ", $string1);
+    $hash_map = array();
 
-    if (count($list_s) != count($list_str)) {
+    if (count($list_str) != count($list_string)) {
         return false;
     }
 
-    for ($i = 0; $i < count($list_s); $i++) {
-        if (array_key_exists($list_s[$i], $map)) {
-            if ($map[$list_s[$i]] != $list_str[$i]) {
+    for ($i = 0; $i < count($list_str); $i++) {
+        $temp = $list_str[$i];
+        if (array_key_exists($temp, $hash_map)) {
+            if ($hash_map[$temp] != $list_string[$i]) {
                 return false;
             }
         } else {
-            $map[$list_s[$i]] = $list_str[$i];
+            $hash_map[$temp] = $list_string[$i];
         }
     }
 
     return true;
 }
 
-echo areFollowingPattern($string1, $str1) ? "true\n" : "false\n";
-echo areFollowingPattern($string2, $str2) ? "true\n" : "false\n";
+
+echo checkFollowingPattern($str1, $string1) ? "true\n" : "false\n";
+echo checkFollowingPattern($str2, $string2) ? "true\n" : "false\n";

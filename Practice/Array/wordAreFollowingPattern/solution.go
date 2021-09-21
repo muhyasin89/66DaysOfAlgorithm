@@ -5,8 +5,8 @@ import (
 	"strings"
 )
 
-func ContainsKey(m map[string]string, s string) bool {
-	if _, ok := m[s]; ok {
+func ContainsKey(str1 string, hash_map map[string]string) bool {
+	if _, ok := hash_map[str1]; ok {
 		if ok {
 			return true
 		}
@@ -15,24 +15,26 @@ func ContainsKey(m map[string]string, s string) bool {
 	return false
 }
 
-func checkPattern(s string, str string) bool {
-	m := map[string]string{}
-	list_str := strings.Split(str, " ")
-	a := []rune(s)
-	if len(list_str) != len(a) {
+func checkFollowingPattern(str1 string, string1 string) bool {
+	list_string := strings.Split(string1, " ")
+	chars := []rune(str1)
+	hash_map := map[string]string{}
+
+	if len(list_string) != len(chars) {
 		return false
 	}
 
-	for i, val := range a {
-		c := string(val)
-		if ContainsKey(m, c) {
-			if m[c] != list_str[i] {
+	for i, val := range chars {
+		temp := string(val)
+		if ContainsKey(temp, hash_map) {
+			if hash_map[temp] != list_string[i] {
 				return false
 			}
 		} else {
-			m[c] = list_str[i]
+			hash_map[temp] = list_string[i]
 		}
 	}
+
 	return true
 }
 
@@ -45,7 +47,7 @@ func main() {
 	string2 := "dog cat cat fish"
 	// return False
 
-	fmt.Println(checkPattern(str1, string1))
-	fmt.Println(checkPattern(str2, string2))
+	fmt.Println(checkFollowingPattern(str1, string1))
+	fmt.Println(checkFollowingPattern(str2, string2))
 
 }

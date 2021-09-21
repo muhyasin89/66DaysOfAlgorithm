@@ -1,35 +1,38 @@
 
-string1 = "abba"
-str1 = "dog cat cat dog"
+str1  = "abba"
+string1 = "dog cat cat dog"
 //result True
 
-string2 = "abba"
-str2 = "dog cat cat fish"
+ 
+str2 = "abba"
+string2= "dog cat cat fish"
 //return False
 
-const areFollowingPatterns = (s,str) =>{
-    m = new Map();
-    list_s = s.split("");
-    list_str = str.split(" ");
 
-    if(list_s.length != list_str.length){
+const checkFollowingPattern = (str1, string1) =>{
+    hash_map = new Map();
+    list_str = str1.split("")
+    list_string = string1.split(" ")
+
+    if(list_str.length != list_string.length){
         return false;
     }
 
-    for(let i=0; i< list_s.length; i++){
-        if(m.has(list_s[i])){
-            
-            if(m.get(list_s[i]) != list_str[i]){
+    
+
+    for(let i=0; i< list_str.length;i++){
+        temp = list_str[i];
+        if(hash_map.has(temp)){
+            if(hash_map.get(temp)!= list_string[i]){
                 return false;
             }
         }else{
-            m.set(list_s[i], list_str[i]);
+            hash_map.set(temp, list_string[i]);
         }
-        
     }
+
     return true;
 }
 
-
-console.log(areFollowingPatterns(string1, str1));
-console.log(areFollowingPatterns(string2, str2));
+console.log(checkFollowingPattern(str1,string1))
+console.log(checkFollowingPattern(str2,string2))

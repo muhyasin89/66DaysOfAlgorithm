@@ -1,11 +1,12 @@
-string1 = "abba"
-str1 = "dog cat cat dog"
+str1 = "abba"
+string1 ="dog cat cat dog"
 # result True
 
-string2 = "abba"
-str2 = "dog cat cat fish"
 
-def areFollowingPattern(s, str)
+str2 =  "abba"
+string2 ="dog cat cat fish"
+
+def checkFollowingPattern(s, str)
     hash_map = {}
     list_s = s.split("")
     list_str = str.split(" ")
@@ -27,5 +28,5 @@ def areFollowingPattern(s, str)
     return true
 end
 
-puts areFollowingPattern(string1, str1)
-puts areFollowingPattern(string2, str2)
+puts checkFollowingPattern(str1, string1)
+puts checkFollowingPattern(str2,string2)
