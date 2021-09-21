@@ -1,14 +1,3 @@
-===========================
-what the problem? |||
-===========================
-
-===========================
-what the Goal? |||
-===========================
-
-===========================
-|Example? |||
-===========================
 Input
 dishes = [["Salad", "Tomato", "Cucumber", "Salad", "Sauce"],
             ["Pizza", "Tomato", "Sausage", "Sauce", "Dough"],
@@ -34,24 +23,3 @@ groupingDishes(dishes) = [["Cheese", "Quesadilla", "Sandwich"],
                             ["Chicken", "Chicken Curry", "Quesadilla"],
                             ["Nuts", "Fried Rice", "Salad"],
                             ["Onions", "Fried Rice", "Pasta"]]
-
-    ===================
-    Information so far|
-    ===================
-
-    ==============
-    unclear use?|
-    ==============
-
-
-    ========================================
-    step by step for solving this problem?|
-    ========================================
-
-    =====================================
-    how many ways to solve this problem?|
-    =====================================
-
-    ===========================
-    how long it takes? ||
-    ===========================

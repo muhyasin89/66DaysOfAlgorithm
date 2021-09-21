@@ -1,32 +1,24 @@
-#!/bin/python3
+ransomNote = "a"
+magazine = "b"
+# expected False
 
-import math
-import os
-import random
-import re
-import sys
+ransomNote1 = "aa"
+magazine1 = "ab"
+# expected False
 
-
-# Complete the 'checkMagazine' function below.
-#
-# The function accepts following parameters:
-#  1. STRING_ARRAY magazine
-#  2. STRING_ARRAY note
-#
-
-def checkMagazine(magazine, note):
-    # Write your code here
+ransomNote2 = "aa"
+magazine2 = "aab"
+# expected True
 
 
-if __name__ == '__main__':
-    first_multiple_input = input().rstrip().split()
+def canConstruct(ransomNote: str, magazine: str) -> bool:
 
-    m = int(first_multiple_input[0])
+    for c in set(ransomNote):
+        if ransomNote.count(c) > magazine.count(c):
+            return False
+    return True
 
-    n = int(first_multiple_input[1])
 
-    magazine = input().rstrip().split()
-
-    note = input().rstrip().split()
-
-    checkMagazine(magazine, note)
+print(canConstruct(ransomNote, magazine))
+print(canConstruct(ransomNote1, magazine1))
+print(canConstruct(ransomNote2, magazine2))
