@@ -1,3 +1,6 @@
+import java.sql.Array;
+import java.util.ArrayList;
+
 public class Solution {
     public void sort(int arr[]) {
         int n = arr.length;
@@ -44,22 +47,18 @@ public class Solution {
         }
     }
 
-    /* A utility function to print array of size n */
-    static void printArray(int arr[]) {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
-
     // Driver code
     public static void main(String args[]) {
-        int arr[] = { 12, 11, 13, 5, 6, 7 };
+        int arr[] = { 5, 12, 11, 13, 4, 6, 7 };
 
         Solution obj = new Solution();
         obj.sort(arr);
+        ArrayList<Integer> result = new ArrayList<>();
 
-        System.out.println("Sorted array is");
-        printArray(arr);
+        for (int i = 0; i < arr.length; i++) {
+            result.add(arr[i]);
+        }
+
+        System.out.println("Sorted array is " + result);
     }
 }
