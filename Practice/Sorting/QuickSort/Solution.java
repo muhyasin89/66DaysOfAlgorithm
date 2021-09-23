@@ -1,6 +1,7 @@
 
 // Java implementation of QuickSort
 import java.io.*;
+import java.util.ArrayList;
 
 class Solution {
 
@@ -60,21 +61,16 @@ class Solution {
 		}
 	}
 
-	// Function to print an array
-	static void printArray(int[] arr, int size) {
-		for (int i = 0; i < size; i++)
-			System.out.print(arr[i] + " ");
-
-		System.out.println();
-	}
-
 	// Driver Code
 	public static void main(String[] args) {
 		int[] arr = { 10, 7, 8, 9, 1, 5 };
 		int n = arr.length;
+		ArrayList<Integer> result = new ArrayList<>();
 
 		quickSort(arr, 0, n - 1);
-		System.out.println("Sorted array: ");
-		printArray(arr, n);
+		for (int i = 0; i < n; i++) {
+			result.add(arr[i]);
+		}
+		System.out.println("Sorted array: " + result);
 	}
 }
