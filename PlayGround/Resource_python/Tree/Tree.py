@@ -21,41 +21,44 @@ arr = [1, 4, 5, 6, 7]
 first_tree = sortArrBST(arr)
 first_tree
 
+print("Array {}".format(arr))
+
 
 def preOrder(head):
     if head == None:
-        return []
+        return
 
-    left = preOrder(head.left)
-    right = preOrder(head.right)
+    print("{}".format(head.val), end=" ")
+    preOrder(head.left)
+    preOrder(head.right)
 
-    return [head.val] + left + right
 
-
-print(preOrder(first_tree))
+print("PreOrder Traversal - recursive solution : ")
+preOrder(first_tree)
 
 
 def inOrder(head):
     if head == None:
-        return []
+        return
 
-    left = inOrder(head.left)
-    right = inOrder(head.right)
+    inOrder(head.left)
+    print("{}".format(head.val), end=" ")
+    inOrder(head.right)
 
-    return left + [head.val] + right
 
-
-print(inOrder(first_tree))
+print("\nInorder Traversal - recursive solution : ")
+inOrder(first_tree)
 
 
 def postOrder(head):
     if head == None:
-        return []
+        return
 
-    left = postOrder(head.left)
-    right = postOrder(head.right)
+    postOrder(head.left)
+    postOrder(head.right)
+    print("{}".format(head.val), end=" ")
 
-    return left + [head.val] + right
 
-
-print(postOrder(first_tree))
+print("\nPost Order Traversal - recursive solution : ")
+postOrder(first_tree)
+print("\n")
