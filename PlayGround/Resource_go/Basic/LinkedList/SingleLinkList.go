@@ -42,11 +42,6 @@ func PrintLinkedList(list *Node) {
 	fmt.Println()
 }
 
-func ShowBackwards(list *Node) {
-
-	fmt.Println()
-}
-
 func (S *SingleLinkedList) Reverse() {
 	curr := S.head
 	var prev *Node
@@ -68,10 +63,23 @@ func (S *SingleLinkedList) changeListToLinked(arr []int) {
 	}
 }
 
+func (S *SingleLinkedList) changeLinkedListToArray() []int {
+	arr := []int{}
+	list := S.head
+
+	for list != nil {
+		arr = append(arr, list.key.(int))
+		list = list.next
+	}
+
+	return arr
+}
+
 func main() {
 	arr := []int{1, 4, 5, 6, 7}
 	link := SingleLinkedList{}
 
+	fmt.Println(arr)
 	link.changeListToLinked(arr)
 
 	fmt.Println("\n==============================\n")
@@ -82,4 +90,6 @@ func main() {
 	fmt.Printf("head: %v\n", link.head.key)
 	link.Reverse()
 	fmt.Println("\n==============================\n")
+	result := link.changeLinkedListToArray()
+	fmt.Println(result)
 }
