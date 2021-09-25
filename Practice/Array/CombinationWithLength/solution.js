@@ -13,15 +13,18 @@ const arrChopped =(arr, L) => {
 }
 
 const combinationUtils = (result, arr, data, start, end, index, L) =>{
+    result =[]
     if(index == L){
         for(let i=0;i< L; i++){
             result.push(data[i]);
         }
+
+        return result;
     }
 
     for (let j = start; (j <= end) && (end - j + 1 >= L - index); j++) {
         data[index] = arr[j];
-        result = combinationUtils(result, arr, data, j + 1, end, index + 1, L);
+        result.push(...combinationUtils(result, arr, data, j + 1, end, index + 1, L));
         
     }
     return result;
