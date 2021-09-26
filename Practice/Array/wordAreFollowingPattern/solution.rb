@@ -6,27 +6,29 @@ string1 ="dog cat cat dog"
 str2 =  "abba"
 string2 ="dog cat cat fish"
 
-def checkFollowingPattern(s, str)
-    hash_map = {}
-    list_s = s.split("")
-    list_str = str.split(" ")
 
-    if list_s.length != list_str.length
+def areFollowingPattern(str1,string1)
+    hash_map ={}
+    list_str = str1.split("")
+    list_string = string1.split(" ")
+
+    if list_str.length != list_string.length
         return false
     end
 
-    for i in 0..list_s.length
-        if hash_map.key?(list_s[i])
-            if hash_map[list_s[i]] != list_str[i]
+    for i in 0..list_str.length
+        temp = list_str[i]
+        if hash_map.key?(temp)
+            if hash_map[temp] != list_string[i]
                 return false
             end
         else
-            hash_map[list_s[i]] = list_str[i]
+            hash_map[temp] = list_string[i]
         end
     end
 
     return true
 end
 
-puts checkFollowingPattern(str1, string1)
-puts checkFollowingPattern(str2,string2)
+puts areFollowingPattern(str1,string1)
+puts areFollowingPattern(str2,string2)

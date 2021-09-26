@@ -7,9 +7,10 @@ string2 = "dog cat cat fish"
 # return False
 
 
-def checkFollowingPattern(str1, str2):
+def areFollowingPattern(str1, string1):
     list_str = list(str1)
-    list_string = str2.split(" ")
+    list_string = string1.split(" ")
+
     hash_map = {}
 
     if len(list_str) != len(list_string):
@@ -17,7 +18,6 @@ def checkFollowingPattern(str1, str2):
 
     for i in range(len(list_str)):
         temp = list_str[i]
-
         if temp not in hash_map.keys():
             hash_map[temp] = list_string[i]
         else:
@@ -27,5 +27,5 @@ def checkFollowingPattern(str1, str2):
     return True
 
 
-print(checkFollowingPattern(str1, string1))
-print(checkFollowingPattern(str2, string2))
+print(areFollowingPattern(str1, string1))
+print(areFollowingPattern(str2, string2))

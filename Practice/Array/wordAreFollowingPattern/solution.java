@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class solution {
-
-    Boolean checkFollowingPattern(String str1, String string1) {
+    Boolean areFollowingPattern(String str1, String string1) {
         Map<Character, String> hash_map = new HashMap<>();
 
         String[] list_string = new String[] {};
@@ -42,7 +41,8 @@ public class solution {
 
         solution obj = new solution();
 
-        System.out.println(obj.checkFollowingPattern(str1, string1));
-        System.out.println(obj.checkFollowingPattern(str2, string2));
+        System.out.println(obj.areFollowingPattern(str1, string1));
+        System.out.println(obj.areFollowingPattern(str2, string2));
+
     }
 }
