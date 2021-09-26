@@ -22,7 +22,7 @@ func combinationUtils(arr []int, data []int, start int, end int, index int, L in
 		return result
 	}
 
-	for j := 0; (j <= end) && (end-j+1 >= L-index); j++ {
+	for j := start; (j <= end) && (end-j+1 >= L-index); j++ {
 		data[index] = arr[j]
 		result = append(result, combinationUtils(arr, data, j+1, end, index+1, L)...)
 	}

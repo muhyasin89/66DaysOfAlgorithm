@@ -13,7 +13,7 @@ public class solution {
     }
 
     ArrayList<Integer> combinationUtils(int arr[], int data[], int start, int end, int index, int L) {
-        solution obj = new solution();
+
         ArrayList<Integer> result = new ArrayList<>();
         if (index == L) {
             for (int i = 0; i < L; i++) {
@@ -24,16 +24,16 @@ public class solution {
 
         for (int j = start; (j <= end) && (end - j + 1 >= L - index); j++) {
             data[index] = arr[j];
-            result.addAll(obj.combinationUtils(arr, data, j + 1, end, index + 1, L));
+            result.addAll(combinationUtils(arr, data, j + 1, end, index + 1, L));
         }
 
         return result;
     }
 
-    List<ArrayList<Integer>> getAllCombinations(solution obj, List<ArrayList<Integer>> result_arr, int arr[], int L) {
+    List<ArrayList<Integer>> getAllCombinations(List<ArrayList<Integer>> result_arr, int arr[], int L) {
         int arr_len = arr.length;
         int data[] = new int[L];
-        result_arr = obj.arrChopped(obj.combinationUtils(arr, data, 0, arr_len - 1, 0, L), L);
+        result_arr = arrChopped(combinationUtils(arr, data, 0, arr_len - 1, 0, L), L);
 
         return result_arr;
     }
@@ -44,7 +44,7 @@ public class solution {
         List<ArrayList<Integer>> result_arr = new ArrayList<>();
 
         solution obj = new solution();
-        result_arr = obj.getAllCombinations(obj, result_arr, arr, L);
+        result_arr = obj.getAllCombinations(result_arr, arr, L);
         System.out.println(result_arr);
 
     }

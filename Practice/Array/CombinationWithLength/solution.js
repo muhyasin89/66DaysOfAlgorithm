@@ -1,15 +1,15 @@
 arr = [1, 2, 3, 4, 5]
 L = 2
 
-const arrChopped =(arr, L) => {
-    new_result = []
+const arrChopped =(arr, L) =>{
+    result = []
     let temp;
     for(let i=0; i< arr.length; i++){
-        temp = arr.slice(i, i+L)
-        new_result.push.apply(new_result, [temp])
+        temp = arr.slice(i, i+L);
+        result.push.apply(result, [temp])
     }
 
-    return new_result
+    return result
 }
 
 const combinationUtils = (result, arr, data, start, end, index, L) =>{
@@ -39,8 +39,8 @@ const getAllCombinations =(arr, L) =>{
 
     result_arr = combinationUtils(result_arr, arr, data, 0, arr_len-1, 0, L);
 
-    return arrChopped(result_arr, L)
-
+    return arrChopped(result_arr,L)
+    
 }
 
 console.log(getAllCombinations(arr, L));
