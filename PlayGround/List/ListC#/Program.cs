@@ -1,12 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
 
 // make string "Hello World" and string "1122334455"
+string str1, int1;
+str1 = "Hello World";
+int1 = "1122334455";
 
 
 // turn string into list
+List<char> list_str = new List<char>();
+List<char> list_int = new List<char>();
 
+list_str.AddRange(str1);
+list_int.AddRange(int1);
+list_str.ForEach(Console.WriteLine);
 
+list_int.ForEach(Console.WriteLine);
 // turn list string into list int
 
 // turn list into string
