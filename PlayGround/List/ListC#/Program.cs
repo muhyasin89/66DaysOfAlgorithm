@@ -1,3 +1,6 @@
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+
 // make string "Hello World" and string "1122334455"
 
 
