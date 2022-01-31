@@ -13,7 +13,12 @@ struct Rectangle{
 int main(){
     
     struct Rectangle r1={10, 5};
-    printf("%d", sizeof(r1));
+   
+    r1.length = 15;
+    r1.breadth = 7;
+
+    std::cout << r1.length << std::endl;
+    std::cout << r1.breadth << std::endl;
 
     return 0;
 }
