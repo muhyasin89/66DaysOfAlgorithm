@@ -8,20 +8,35 @@ int1 = "1122334455";
 
 
 // turn string into list
-List<char> list_str = new List<char>();
-List<char> list_int = new List<char>();
+List<char> listStr = new List<char>();
+List<char> listInt = new List<char>();
 
-list_str.AddRange(str1);
-list_int.AddRange(int1);
-list_str.ForEach(Console.WriteLine);
+listStr.AddRange(str1);
+listInt.AddRange(int1);
+listStr.ForEach(Console.Write);
+Console.WriteLine();
+listInt.ForEach(Console.Write);
+Console.WriteLine();
 
-list_int.ForEach(Console.WriteLine);
-// turn list string into list int
+Type listIntType = listInt.GetType().GetGenericArguments().Single();
+Console.WriteLine("Type : "+listIntType);
+
+
+List<int> Convert(List<char> listChar){
+    List<int> intList = new List<int>();
+
+    for(int i=0; i < listChar.Count;  i++){
+        intList.Add(int.Parse(listChar[i].ToString()));
+    }
+
+    return intList;
+}
+
+List<int> arrInt = Convert(listInt);
+Console.WriteLine("Type : "+arrInt.GetType());
 
 // turn list into string
-
-
-// remove duplicate
+Console.WriteLine(string.Join( "", str1.ToArray()));
 
 // check if 'space' inside list
 
@@ -33,6 +48,8 @@ list_int.ForEach(Console.WriteLine);
 // swap list
 
 // make another list
+
+// remove duplicate
 
 
 // merge 2 list with same type
