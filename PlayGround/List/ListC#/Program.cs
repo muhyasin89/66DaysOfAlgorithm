@@ -39,9 +39,10 @@ Console.WriteLine("Type : "+arrInt.GetType());
 Console.WriteLine(string.Join( "", str1.ToArray()));
 
 // check if 'space' inside list
+Console.WriteLine(listStr.Any(Char.IsWhiteSpace));
 
 // check index space
-
+//Console.WriteLine(listStr.IndexOf());
 
 // remove space in list
 
