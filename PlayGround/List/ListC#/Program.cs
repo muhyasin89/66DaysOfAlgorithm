@@ -1,5 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+static IList<T> Swap<T>(IList<T> list, int indexA, int indexB)
+{
+    T tmp = list[indexA];
+    list[indexA] = list[indexB];
+    list[indexB] = tmp;
+    
+    return list;
+}
 
 // make string "Hello World" and string "1122334455"
 string str1, int1;
@@ -21,7 +29,6 @@ Console.WriteLine();
 Type listIntType = listInt.GetType().GetGenericArguments().Single();
 Console.WriteLine("Type : "+listIntType);
 
-
 List<int> Convert(List<char> listChar){
     List<int> intList = new List<int>();
 
@@ -42,11 +49,16 @@ Console.WriteLine(string.Join( "", str1.ToArray()));
 Console.WriteLine(listStr.Any(Char.IsWhiteSpace));
 
 // check index space
-//Console.WriteLine(listStr.IndexOf());
+int indexSpace = listStr.FindIndex(Char.IsWhiteSpace);
+Console.WriteLine(indexSpace);
 
 // remove space in list
+listStr.RemoveAt(indexSpace);
+Console.WriteLine(string.Join( "", listStr.ToArray()));
 
 // swap list
+Swap(listStr, 5,6);
+Console.WriteLine(string.Join( "", listStr.ToArray()));
 
 // make another list
 

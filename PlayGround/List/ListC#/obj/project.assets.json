@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Personal\\66DaysOfAlgorithm\\PlayGround\\List\\ListC#\\ListC#.csproj",
+      "projectUniqueName": "D:\\Personal\\66DaysOfAlgorithm\\PlayGround\\List\\ListC#\\ListC#.csproj",
       "projectName": "ListC#",
-      "projectPath": "C:\\Users\\Lenovo\\Personal\\66DaysOfAlgorithm\\PlayGround\\List\\ListC#\\ListC#.csproj",
+      "projectPath": "D:\\Personal\\66DaysOfAlgorithm\\PlayGround\\List\\ListC#\\ListC#.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Personal\\66DaysOfAlgorithm\\PlayGround\\List\\ListC#\\obj\\",
+      "outputPath": "D:\\Personal\\66DaysOfAlgorithm\\PlayGround\\List\\ListC#\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
