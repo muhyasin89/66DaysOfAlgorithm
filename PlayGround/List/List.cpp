@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <cstring>
 
 using namespace std;
 
@@ -11,6 +12,19 @@ void printList(list<char> const &list){
 
     std::cout << std::endl;
 }
+
+string convertToString(list<char> a, int size)
+{
+    int i;
+    string s = "";
+    for (i = 0; i < size; i++) {
+        s = s + a.at(i);
+    }
+    return s;
+}
+
+
+
 
 int main(){
     // make string "Hello World" and string "1122334455"
@@ -28,8 +42,23 @@ int main(){
     printList(listInt1);
     
     // turn list string into list int
+    
+    std::list<int> intList;
+    
+    for (char c: int1) {
+        intList.push_back(c-48);
+    }
+    for(const auto& elem: intList){
+        std::cout << elem << " ";
+    }
+    
+    std::cout << std::endl;
 
     // turn list into string
+    string s = convertToString(listStr1, listStr1.size());
+
+
+    // std::cout << std::endl << str1.size();
 
 
     // remove duplicate
