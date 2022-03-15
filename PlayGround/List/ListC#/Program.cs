@@ -61,12 +61,21 @@ Swap(listStr, 5,6);
 Console.WriteLine(string.Join( "", listStr.ToArray()));
 
 // make another list
-
-// remove duplicate
+List<int> arrInt2 = new List<int>();
+arrInt2.Add(6);
+arrInt2.Add(7);
+arrInt2.Add(8);
+arrInt2.Add(9);
+arrInt2.Add(10);
 
 
 // merge 2 list with same type
+var combineArr = arrInt.Concat(arrInt2).ToList();
+Console.WriteLine(string.Join( "", combineArr.ToArray()));
 
+// remove duplicate
+combineArr = combineArr.Distinct().ToList();
+Console.WriteLine(string.Join( "", combineArr.ToArray()));
 
 // cut list into 2 left and right
 
