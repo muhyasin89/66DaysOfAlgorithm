@@ -17,6 +17,8 @@ string convertToString(list<char> a, int size)
 {
     int i;
     string s = "";
+
+
     for (i = 0; i < size; i++) {
         s = s + a.at(i);
     }
@@ -62,6 +64,11 @@ int main(){
 
 
     // remove duplicate
+    // std::unordered_set<int> s;
+
+    // intList.remove_if([&](int n) {
+    //     return (s.find(n) == s.end()) ? (s.insert(n), false) : true 
+    // });
 
     // check if 'space' inside list
 
