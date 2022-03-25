@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <vector>
 #include <cstring>
 
 using namespace std;
@@ -15,17 +16,41 @@ void printList(list<char> const &list){
 
 string convertToString(list<char> a, int size)
 {
-    int i;
+   int i;
     string s = "";
 
-
+    list<char>::iterator it = a.begin();
     for (i = 0; i < size; i++) {
-        s = s + a.at(i);
+        s = s + *it;
+        ++it;
     }
     return s;
 }
 
-
+// void removeDuplicates(int arr[], int n)
+// {
+//     int i;
+  
+//     // Initialise a set
+//     // to store the array values
+//     std::vector<int> s;
+  
+//     // Insert the array elements
+//     // into the set
+//     for (i = 0; i < n; i++) {
+  
+//         // insert into set
+//         s.insert(arr[i]);
+//     }
+  
+//     std::vector<int>::iterator it;
+  
+//     // Print the array with duplicates removed
+//     cout << "\nAfter removing duplicates:\n";
+//     for (it = s.begin(); it != s.end(); ++it)
+//         cout << *it << ", ";
+//     cout << '\n';
+// }
 
 
 int main(){
@@ -46,7 +71,7 @@ int main(){
     // turn list string into list int
     
     std::list<int> intList;
-    
+   
     for (char c: int1) {
         intList.push_back(c-48);
     }
@@ -56,19 +81,25 @@ int main(){
     
     std::cout << std::endl;
 
-    // turn list into string
+
+    // turn list char into string
     string s = convertToString(listStr1, listStr1.size());
+    std::cout << s << endl;
 
 
-    // std::cout << std::endl << str1.size();
+    // turn list<int> into int[]
+    int arr[intList.size()];
+    int k = 0;
+    for (int const &i: intList) {
+        arr[k++] = i;
+    }
 
+     for (int const &i: arr) {
+        std::cout << i << ' ';
+    }
 
     // remove duplicate
-    // std::unordered_set<int> s;
-
-    // intList.remove_if([&](int n) {
-    //     return (s.find(n) == s.end()) ? (s.insert(n), false) : true 
-    // });
+    
 
     // check if 'space' inside list
 
