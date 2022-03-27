@@ -16,6 +16,14 @@ void printList(list<char> const &list){
     std::cout << std::endl;
 }
 
+void printCharArray(char *arr, int arrSize){
+    for(int i=0; i< arrSize; i++){
+        std::cout << arr[i];
+    }
+
+    std::cout << endl;
+}
+
 string convertToString(list<char> a, int size)
 {
    int i;
@@ -32,6 +40,13 @@ string convertToString(list<char> a, int size)
 void changeListToArray(list<int> intList, int* arr){
     int k = 0;
     for (int const &i: intList) {
+        arr[k++] = i;
+    }
+}
+
+void changeListStrToArray(list<char> listStr, char* arr){
+    int k = 0;
+    for (int const &i: listStr) {
         arr[k++] = i;
     }
 }
@@ -81,8 +96,56 @@ void combineArr(int *arr1, int *arr2, int *arr3, int arr1Size, int arr2Size, int
     for (int i = 0; i < combineSize; i++) {
         std::cout << arr3[i] << ' ';
     }
- 
 }
+
+void checkSpace(list<char> const &list){
+    bool hasSpace = false;
+    for (auto const &i: list){
+        if(i == ' '){
+            hasSpace = true;
+        }
+    }
+
+    if(hasSpace){
+        std::cout << "There are some Space";
+    }else{
+        std::cout << "There is no Space";
+    }
+
+    std::cout << std::endl;
+}
+
+int getposition(const char *array, size_t size, char c)
+{
+     const char* end = array + size;
+     const char* match = std::find(array, end, c);
+     return (end == match)? -1 : (match-array);
+}
+
+// This function removes an element x from arr[] and
+// returns new size after removal (size is reduced only
+// when x is present in arr[]
+int deleteElement(char *arr, int n, char x)
+{
+    // Search x in array
+    int i;
+    for (i=0; i<n; i++)
+        if (arr[i] == x)
+            break;
+
+    // If x found in array
+    if (i < n)
+    {
+        // reduce size of array and move all
+        // elements on space ahead
+        n = n - 1;
+        for (int j=i; j<n; j++)
+            arr[j] = arr[j+1];
+    }
+
+    return n;
+}
+
 
 int main(){
     // make string "Hello World" and string "1122334455"
@@ -114,8 +177,8 @@ int main(){
 
 
     // turn list char into string
-    string s = convertToString(listStr1, listStr1.size());
-    std::cout << s << endl;
+    string str = convertToString(listStr1, listStr1.size());
+    std::cout << str << endl;
 
 
     // turn list<int> into int[]
@@ -138,12 +201,33 @@ int main(){
         std::cout << arr1[i] << " " ;
     }
 
+    std::cout << endl;
+
     // check if 'space' inside list
+    checkSpace(listStr1);
 
     // check index space
+    char arrStr[listStr1.size()];
+    std::cout << endl << "List size:" << listStr1.size() << endl;
 
+    //change List<str> into char[]
+    changeListStrToArray(listStr1, arrStr); 
+
+    int arrStrSize = sizeof(arr)/ sizeof(arr[0]);
+    printCharArray(arrStr, arrStrSize);
+
+    int spaceIndex = getposition(arrStr, arrStrSize, ' ');
+    std::cout << "the space is " << spaceIndex;
 
     // remove space in list
+    arrStrSize = deleteElement(arrStr, arrStrSize, ' ');
+    std::cout << endl << "Array Str Size:" << arrStrSize << endl;
+	cout << endl << "Modified array is \n";
+	for (int i=0; i<=arrStrSize+1; i++)
+	    std::cout << arrStr[i] << " ";
+
+    std::cout << endl;
+    // printCharArray(arrStr, arrStrSize);
 
     // swap list
 
@@ -151,14 +235,13 @@ int main(){
     int arr2[5] = {6, 7, 8, 9, 10};
     int arr2Size = sizeof(arr2)/sizeof(arr2[0]);
 
-    
     // merge 2 list with same type
     int combineSize = arr1Size + arr2Size;
     int arr3[combineSize];
 
     std::cout << endl <<"combine length:" << combineSize << endl;
-
     combineArr(arr1, arr2, arr3, arr1Size, arr2Size, combineSize);
+  
 
     // cut list into 2 left and right
 
