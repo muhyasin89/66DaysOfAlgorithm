@@ -146,6 +146,14 @@ int deleteElement(char *arr, int n, char x)
     return n;
 }
 
+void printVectorChar(vector<char> newChar){
+    for (int i = 0; i < newChar.size(); i++) {
+      std::cout << newChar[i];
+    }
+
+    std::cout << endl;
+}
+
 
 int main(){
     // make string "Hello World" and string "1122334455"
@@ -227,9 +235,6 @@ int main(){
 	    std::cout << arrStr[i] << " ";
 
     std::cout << endl;
-    // printCharArray(arrStr, arrStrSize);
-
-    // swap list
 
     // make another list
     int arr2[5] = {6, 7, 8, 9, 10};
@@ -241,9 +246,31 @@ int main(){
 
     std::cout << endl <<"combine length:" << combineSize << endl;
     combineArr(arr1, arr2, arr3, arr1Size, arr2Size, combineSize);
-  
 
+    // swap list
+    swap(arrStr[4], arrStr[5]);
+    for (int i=0; i<=arrStrSize; i++)
+	    std::cout << arrStr[i] << " ";
+
+    std::cout << endl;
+    
+    //change array to vector
+    vector<char> helloChars;
+
+    for(int i=0; i < arrStrSize; i++){
+        helloChars.push_back(arrStr[i]);
+    }
+
+    size_t half = helloChars.size() / 2;
     // cut list into 2 left and right
+    if(half > 0){
+        std::vector<char> firstPart(helloChars.begin(),helloChars.begin() + half);
+        std::vector<char> lastPart(helloChars.begin() + half,helloChars.end());
+
+        printVectorChar(helloChars);
+        printVectorChar(firstPart);
+        printVectorChar(lastPart);
+    }
 
     // make hash map
 
@@ -252,7 +279,6 @@ int main(){
     // get hash_map get value of k
 
     // check if n in values
-
 
     // itterate hashmap
     return 0;
