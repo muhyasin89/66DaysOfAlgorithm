@@ -154,6 +154,17 @@ void printVectorChar(vector<char> newChar){
     std::cout << endl;
 }
 
+void searcHashValue(unordered_map<int, string> hash_map ,string searchvalue)
+{
+     for (auto x : hash_map){
+         if( x.second == searchvalue){
+             cout<<"value present at " << x.first << " the value is:"<< x.second <<endl;
+             return;
+         }
+     }
+     cout<<"value do not exist"<<endl;
+}
+
 
 int main(){
     // make string "Hello World" and string "1122334455"
@@ -273,13 +284,31 @@ int main(){
     }
 
     // make hash map
+    unordered_map<int, string> hash_map;
+    hash_map[1] = "first";
+    hash_map[2] = "second";
+    hash_map[3] = "third";
+
+    int k = 1;
 
     // check if n in keys
+    if (hash_map.find(k) != hash_map.end()) {
+        std::cout << k <<" Key found";
+    }
+
+    std::cout << endl;
 
     // get hash_map get value of k
+    std::cout << "The value of K: "<< hash_map[k] << endl; 
 
     // check if n in values
+    searcHashValue(hash_map, "second");
+
+    std::cout << endl;
 
     // itterate hashmap
+    for (auto x : hash_map)
+      cout << x.first << " " << x.second << endl;
+
     return 0;
 }
