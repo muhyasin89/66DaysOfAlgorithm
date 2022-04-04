@@ -54,11 +54,11 @@ Console.WriteLine(indexSpace);
 
 // remove space in list
 listStr.RemoveAt(indexSpace);
-Console.WriteLine(string.Join( "", listStr.ToArray()));
+Console.WriteLine(string.Join("", listStr.ToArray()));
 
 // swap list
 Swap(listStr, 5,6);
-Console.WriteLine(string.Join( "", listStr.ToArray()));
+Console.WriteLine(string.Join("", listStr.ToArray()));
 
 // make another list
 List<int> arrInt2 = new List<int>();
@@ -77,15 +77,63 @@ Console.WriteLine(string.Join( "", combineArr.ToArray()));
 combineArr = combineArr.Distinct().ToList();
 Console.WriteLine(string.Join( "", combineArr.ToArray()));
 
+int lengthStr = listStr.Count;
+Console.WriteLine(lengthStr);
 // cut list into 2 left and right
 
+
+static List<List<char>> SplitList(List<char> locations, int nSize)  
+{        
+    var list = new List<List<char>>(); 
+
+    for (int i = 0; i < locations.Count; i += nSize) 
+    { 
+        list.Add(locations.GetRange(i, Math.Min(nSize, locations.Count - i))); 
+    } 
+
+    return list; 
+}
+
+List<List<char>> result = SplitList(listStr, lengthStr/2);
+
+foreach(List<char> list in result){
+    Console.WriteLine("****************");
+
+    foreach(char item in list){
+        Console.Write(item);
+    }
+
+    Console.WriteLine();
+}
+
 // make hash map
+IDictionary<int, string> hash_map = new Dictionary<int, string>();
+hash_map.Add(1,"first");
+hash_map.Add(2,"second");
+hash_map.Add(3,"third");
 
 // check if n in keys
+if (hash_map.ContainsKey(1)){
+    Console.WriteLine("Hash Map contains the key");
+}
 
 // get hash_map get value of k
+Console.WriteLine(hash_map[2]);
 
-// check if n in values
+
 
 
 // itterate hashmap
+bool ValueFound = false;
+foreach(KeyValuePair<int, string> kvp in hash_map){
+    // check if n in values
+    if(kvp.Value == "third"){
+        ValueFound = true;
+        Console.WriteLine("Hash Map contains Value");
+    }
+    Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
+}
+
+if(!ValueFound){
+    Console.WriteLine("Hash Map not contains Value");
+}
