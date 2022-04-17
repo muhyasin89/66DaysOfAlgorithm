@@ -1,8 +1,6 @@
 def to_camel_case(text):
-    if "-" in text:
-        words = text.split("-")
-    else:
-        words = text.split("_")
+    text = text.replace("_","-")
+    words = text.split("-")
 
     for i in range(len(words)):
         if i !=0:
