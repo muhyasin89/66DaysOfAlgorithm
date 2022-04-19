@@ -4,3 +4,7 @@
 // reverse list
 
 // change linked list into list
+
+int main(){
+    
+}
