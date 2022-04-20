@@ -1,7 +1,6 @@
-
-#include <iostream>
 #include <string>
 #include <list>
+#include <iostream>
 #include <vector>
 #include <cstring>
 
@@ -9,136 +8,136 @@
 
 using namespace std;
 
-void printList(list<char> const &list){
-    for(auto const &i: list){
-        std::cout << i;
+void printList(list<char> list){
+    for(auto const &item: list){
+        std::cout << item;
     }
 
     std::cout << endl;
 }
 
 string convertToString(list<char> a, int size){
-    string s="";
+    string result = "";
 
     list<char>::iterator it = a.begin();
-    for(int i=0; i < size; i++){
-        s = s + *it;
+    for(int i=0; i< size;i++){
+        result = result + *it;
         ++it;
     }
 
-    return s;
+    return result;
 }
 
-void removeDuplicates(int *arr, int n, int *result){
+void changeListToArray(list<int> intList,int *arr){
+    int k = 0;
+    for(int const &item: intList){
+        arr[k++] = item;
+    }
+}
+
+void removeDuplication(int *arr, int size, int *arr1){
     int i;
     set<int> s;
 
-    for(i=0; i < n; i++){
+    for(i=0; i< size; i++){
         s.insert(arr[i]);
     }
-    
+
     set<int>::iterator it;
 
-    std::cout << endl;
     int k =0;
     for(it=s.begin(); it != s.end(); ++it){
-        std::cout << " " << k << ":"<< *it << " ";
-        result[k++] = *it;
+        std::cout << " " << k << ":" << *it << " ";
+        arr1[k++] = *it;
     }
-
+    
     std::cout << endl;
 }
 
-void changeListToArray(list<int> intList, int* arr){
-    int k=0;
-    for(int const &i: intList){
-        arr[k++] =i;
-    }
-}
-
-bool checkSpace(list<char> const &list){
+bool checkSpace(list<char> a){
     bool hasSpace = false;
-
-    for(auto const &i: list){
-        if(i == ' '){
-            hasSpace=true;
+    for(auto const &c: a){
+        if(c == ' '){
+            hasSpace = true;
         }
     }
 
     return hasSpace;
 }
 
-void changeListStrToArray(list<char> listStr, char* arr){
+void changeListStrToArray(list<char> chr, char *arr){
     int k=0;
-    for(int const &i: listStr){
-        arr[k++] = i;
+    for(int const &item: chr){
+        arr[k++] = item;
     }
 }
+
 
 void printCharArray(char *arr, int arrSize){
     for(int i=0; i< arrSize; i++){
         std::cout << arr[i];
     }
+
+    std::cout << endl;
 }
 
-int getPosition(const char *array, size_t size, char space){
-    const char* end = array + size;
-    const char* match = std::find(array, end, space);
-    return (end == match) ? -1 : (match - array);
+int getPosition(const char *arr, size_t size, char space){
+    const char* end = arr + size;
+    const char* match = std::find(arr, end, space);
+    return (end == match) ? -1 : (match-arr);
 }
 
-int deleteElement(char *arr, int n, char space){
+int deleteElement(char *arr, int size, char space){
     int i;
-    for(i=0; i < n; i++){
-        if(arr[i]== space){
+    for(i=0;i<size;i++){
+        if(arr[i] == space){
             break;
         }
     }
 
-    if(i < n){
-        n = n-1;
-        for(int j=i; j< n; j++){
+    if(i<size){
+        size = size -1;
+        for(int j=i; j<size; j++){
             arr[j] = arr[j+1];
         }
     }
 
-    return n;
+    return size;
 }
 
-void combinationArr(int *arr1, int *arr2, int *arr3, int arr1Size, int arr2Size, int combineSize){
-    for(int i=0; i< combineSize; i++){
+void combinationArr(int *arr1, int *arr2, int *arr3, int arr1Size, int arr2Size, int arr3Size){
+    for(int i=0; i<arr3Size; i++){
         if(i < arr1Size){
-            arr3[i]=arr1[i];
+            arr3[i] = arr1[i];
         }else{
             arr3[i] = arr2[i-arr1Size];
         }
     }
 
-    for(int i=0; i< combineSize; i++){
+    for(int i=0; i< arr3Size; i++){
         std::cout << arr3[i] << " ";
     }
 
     std::cout << endl;
-
 }
 
-void printVectorChar(vector<char> newChar){
-    for(int i=0; i < newChar.size(); i++){
-        std::cout << newChar[i];
+void printVectorChar(vector<char> newChars){
+    for(int i=0; i<newChars.size(); i++){
+        std::cout << newChars[i] << " ";
     }
 
     std::cout << endl;
 }
 
 void searchHashValue(unordered_map<int, string> hash_map, string searchValue){
-    for(auto x: hash_map){
+    for(auto  x: hash_map){
         if(x.second == searchValue){
-            std::cout << "Value Present at "<< x.first << " the value is:" << x.second << endl;
+            std::cout << "Value is present at " << x.first << "The Value is "<< x.second << endl;
             return;
         }
     }
 
-    std::cout << "Value do not exist "<< endl;
+    std::cout << "Value is not exist "<< endl;
 }
 
 int main(){
@@ -150,16 +149,16 @@ int main(){
     std::list<char> listStr1(str1.begin(), str1.end());
     std::list<char> listInt1(int1.begin(), int1.end());
 
-    std::cout << "List Str" << endl;
+    std::cout << "List of Str: " << endl;
     printList(listStr1);
 
-    std::cout << "List Int" << endl;
+    std::cout << "List of Int: " << endl;
     printList(listInt1);
 
     // turn list string into list int
     std::list<int> intList;
 
-    for(char c: int1){
+    for(char c:int1){
         intList.push_back(c-48);
     }
 
@@ -172,25 +171,26 @@ int main(){
     // turn list char into string
     string str = convertToString(listStr1, listStr1.size());
     std::cout << str << endl;
-
+    
     // turn list<int> into int[]
     int arr[intList.size()];
-
-    std::cout << "Size of List is " << intList.size() << endl;
-
     changeListToArray(intList, arr);
-
-    for(int i=0; i < intList.size(); i++){
-        std::cout << arr[i] << " " ;
+    
+    for(int i=0; i<intList.size(); i++){
+        std::cout << arr[i] << " ";
     }
+
+    std::cout << endl;
 
     // remove duplicate
     int arr1[5];
-    removeDuplicates(arr, intList.size(), arr1);
 
-    int arr1Size = sizeof(arr1)/sizeof(arr1[0]);
+    removeDuplication(arr, intList.size(), arr1);
 
-    for(int i=0; i < arr1Size; i++){
+    int arr1Size = sizeof(arr1)/ sizeof(arr1[0]);
+    std::cout << "size of arr1" << arr1Size << endl;
+
+    for(int i=0; i< arr1Size; i++){
         std::cout << arr1[i] << " ";
     }
 
@@ -198,40 +198,35 @@ int main(){
 
     // check if 'space' inside list
     bool hasSpace = checkSpace(listStr1);
+    std::cout << "Space Exist?" << hasSpace << endl;
 
-    std::cout << hasSpace << endl;
-   
-    //change List<str> into char[]
+    // change List<str> into char[]
     char arrStr[listStr1.size()];
-    std::cout << "List size:" << listStr1.size() << endl;
-
     changeListStrToArray(listStr1, arrStr);
 
     int arrStrSize = sizeof(arrStr)/ sizeof(arrStr[0]);
+
     printCharArray(arrStr, arrStrSize);
-    std::cout << endl;
 
-    // check space index in array
+    // check index space
     int spaceIndex = getPosition(arrStr, arrStrSize, ' ');
-    std::cout << "The Space Index is " << spaceIndex << endl;
+    std::cout << "Index of Space in Array:" << spaceIndex;
 
-    // remove space in list
+    // remove space in array
     arrStrSize = deleteElement(arrStr, arrStrSize, ' ');
-    std::cout <<"Array Size: " << arrStrSize << endl;
-    std::cout << "Modified Array is \n";
-    for(int i=0; i < arrStrSize; i++){
+
+    std::cout << "Modified Array is " << endl;
+    for(int i=0; i< arrStrSize; i++){
         std::cout << arrStr[i] << " ";
     }
+
     std::cout << endl;
 
-    // make another list 678910
+    // merge 2 list with same type 678910
     int arr2[5] = {6,7,8,9,10};
     int arr2Size = sizeof(arr2)/ sizeof(arr2[0]);
 
     int arr3[arr1Size+arr2Size];
-    std::cout << "Combination Size: " << arr1Size+arr2Size << endl;
-
-    // merge 2 list with same type
     combinationArr(arr1, arr2, arr3, arr1Size, arr2Size, arr1Size+arr2Size);
 
     // swap list
@@ -242,8 +237,8 @@ int main(){
     }
 
     std::cout << endl;
-  
-    // change array to vector
+    
+   // change array to vector
     vector<char> helloChars;
 
     for(int i=0; i<arrStrSize; i++){
@@ -261,6 +256,7 @@ int main(){
         printVectorChar(firstPart);
         printVectorChar(lastPart);
     }
+    
 
     // make hash map
     unordered_map<int, string> hash_map;
@@ -268,25 +264,29 @@ int main(){
     hash_map[2] = "second";
     hash_map[3] = "third";
 
-    // check if n in keys hash_map[n]
+    // check if n in keys
     int k=1;
     if(hash_map.find(k) != hash_map.end()){
-        std::cout << k << " Key found";
+        std::cout << k << " Key Found";
+    }else{
+        std::cout << "Key Not Found";
     }
 
     std::cout << endl;
 
     // get hash_map get value of k
-    std::cout << "The value of K:" << hash_map[k] << endl;
+    std::cout  << "The value of K is " << hash_map[k] << endl;
 
     // check if n in values
     searchHashValue(hash_map, "second");
 
     std::cout << endl;
+   
 
     // itterate hashmap
     for(auto x: hash_map){
-        std::cout << x.first << " : " << x.second << endl;
+        std::cout << x.first << ":" << x.second << endl;
     }
+
     return 0;
 }
