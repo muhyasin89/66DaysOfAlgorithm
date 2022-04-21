@@ -14,4 +14,4 @@ def numberOfWaysToTheTop(height, maxSteps, memoize):
 		
 	return numberOfWays
 
-# Time Complexity O(K^N)  | Space Complexity O(n)
+# Time Complexity O(n^k)  | Space Complexity O(n)

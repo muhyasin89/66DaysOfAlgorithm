@@ -11,3 +11,5 @@ def numberOfWaysToTheTop(height, maxSteps):
 		numberOfWays += numberOfWaysToTheTop(height-step, maxSteps)
 		
 	return numberOfWays
+
+# Time Complexity O(K^N)  | Space Complexity O(n)
