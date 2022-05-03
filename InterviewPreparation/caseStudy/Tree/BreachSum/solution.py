@@ -56,3 +56,19 @@ def brachSum(root):
     return sum_list
 
 print(brachSum(tree))
+
+
+def depthOfTree(root):
+    if not root:
+        return -1
+    else:
+        lDepth = depthOfTree(root.left)
+        rDepth = depthOfTree(root.right)
+
+        if (lDepth > rDepth):
+            return lDepth + 1
+        else:
+            return rDepth + 1
+
+
+print(depthOfTree(tree))
