@@ -1,0 +1,15 @@
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\bin\Debug\net6.0\sortByFirstList.exe
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\bin\Debug\net6.0\sortByFirstList.deps.json
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\bin\Debug\net6.0\sortByFirstList.runtimeconfig.json
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\bin\Debug\net6.0\sortByFirstList.dll
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\bin\Debug\net6.0\sortByFirstList.pdb
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.csproj.AssemblyReference.cache
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.AssemblyInfoInputs.cache
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.AssemblyInfo.cs
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.csproj.CoreCompileInputs.cache
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.dll
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\refint\sortByFirstList.dll
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.pdb
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\sortByFirstList.genruntimeconfig.cache
+D:\Personal\66DaysOfAlgorithm\Basic\studycase\sortByFirstList\obj\Debug\net6.0\ref\sortByFirstList.dll
